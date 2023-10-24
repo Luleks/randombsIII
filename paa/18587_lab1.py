@@ -91,17 +91,17 @@ def __insertion_sort(arr: List[int]) -> None:
             j -= 1
         arr[j + 1] = tmp
 
-@space_time_monitor
 def bucket_sort(arr: List[int]) -> List[int]:
     arr_max = max(arr)
     if len(arr) > arr_max:
         num_buckets = arr_max + 1
         sort_buckets = False
+        bucket_range = 1
     else:
-        num_buckets = len(arr) // 100 + 1
+        num_buckets = int(round(len(arr) / 100, 0)) + 1 if len(arr) > 100 else 1
         sort_buckets = True
-    bucket_range = arr_max // (num_buckets - 1)
-
+        bucket_range = arr_max // (num_buckets - 1) if num_buckets > 1 else arr_max + 1
+                    
     buckets = {i: [] for i in range(num_buckets)}
 
     for num in arr:
