@@ -118,47 +118,25 @@ def bucket_sort(arr: List[int]) -> List[int]:
     return buckets[0]
 
 
-def generate_report(arrs: List, sorting_algs: Callable, to_txt: bool=True, time_efficient: bool=False) -> None:
-    """
-    Funkcija generiše izveštaj koji se odnosi na vremensku i prostornu efikasnost algoritama za sortiranje.
+def generate_report(arrs: List, sorting_algs: Callable) -> None:
 
-    Args:
-      arrs: Lista nizova nad kojima će algoritmi biti primenjeni.
 
-      sorting_algs: Lista algoritama za sortiranje koji se testiraju.
+    with open('report.txt', 'a+') as f:
+        for arr in arrs:
+            for sort_alg in sorting_algs:
+                if sort_alg.__name__ == 'selection_sort' and len(arr) > 100_000:
+                    continue
 
-      to_txt: Da li je izveštaj potrebno proizvesti u .txt fajlu. Ukoliko je True, fajl će biti generisan, 
-       dok će u suprotnom izveštaj biti prikazan u konzoli.
+                report, sort_is_valid = sort_alg(arr.copy())
 
-      time_efficient: Algoritmi sa kvadratnim složenostima mogu da se izvršavaju prilično dugo za nizove sa
-       velikim brojem elemenata. Ukoliko je time_efficient postavljen na True, algoritam neće
-       biti primenjen nad nizovima čija je dužina veća od 10_000.
-    """
+                if not sort_is_valid:
+                    print(f'Algoritam {sort_alg.__name__} nije zavrsio sa sortiranjem niza od {len(arr)} elemenata')
+                else:
+                    print(f'Algoritam {sort_alg.__name__} je zavrsio sa sortiranjem niza od {len(arr)} elemenata')
 
-    for arr in arrs:
-        if time_efficient and len(arr) > 10_000:
-            continue
+                f.write(report)
 
-        for sort_alg in sorting_algs:
-
-            report, sort_is_valid = sort_alg(arr.copy())
-
-            if not sort_is_valid:
-                print(f'Algoritam {sort_alg.__name__} nije zavrsio sa sortiranjem niza od {len(arr)} elemenata')
-            else:
-                print(f'Algoritam {sort_alg.__name__} je zavrsio sa sortiranjem niza od {len(arr)} elemenata')
-
-            if to_txt:
-                with open('report.txt', 'a+') as f:
-                    f.write(report)
-            else:
-                print(report)
-
-        if to_txt:
-            with open('report.txt', 'a+') as f:
-                f.write('-' * 50 + '\n')
-        else:
-            print('-' * 50 + '\n')
+            f.write('-' * 50 + '\n')
 
 
 if __name__ == '__main__':
@@ -170,5 +148,5 @@ if __name__ == '__main__':
     arr_10_000_000 = [random.randint(0, upper_range) for _ in range(10_000_000)]
 
     arrs = [arr_100, arr_1000, arr_10_000, arr_100_000, arr_1_000_000, arr_10_000_000]
-    sorts = [bucket_sort]
+    sorts = [selection_sort, heap_sort, bucket_sort]
     generate_report(arrs, sorts)

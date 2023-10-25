@@ -1,0 +1,30 @@
+Algoritmu selection_sort je bilo potrebno     0.0073022s da sortira nize velicicne 100 pri cemu je utroseno 0.10937500KB memorije
+Algoritmu      heap_sort je bilo potrebno     0.0003363s da sortira nize velicicne 100 pri cemu je utroseno 0.07812500KB memorije
+Algoritmu    bucket_sort je bilo potrebno     0.0003116s da sortira nize velicicne 100 pri cemu je utroseno 1.23437500KB memorije
+--------------------------------------------------
+Algoritmu selection_sort je bilo potrebno     0.3590850s da sortira nize velicicne 1000 pri cemu je utroseno 0.27734375KB memorije
+Algoritmu      heap_sort je bilo potrebno     0.0087137s da sortira nize velicicne 1000 pri cemu je utroseno 0.15625000KB memorije
+Algoritmu    bucket_sort je bilo potrebno     0.0029688s da sortira nize velicicne 1000 pri cemu je utroseno 16.57031250KB memorije
+--------------------------------------------------
+Algoritmu selection_sort je bilo potrebno    37.6686349s da sortira nize velicicne 10000 pri cemu je utroseno 0.27734375KB memorije
+Algoritmu      heap_sort je bilo potrebno     0.2407219s da sortira nize velicicne 10000 pri cemu je utroseno 0.18359375KB memorije
+Algoritmu    bucket_sort je bilo potrebno     0.0522709s da sortira nize velicicne 10000 pri cemu je utroseno 178.37500000KB memorije
+--------------------------------------------------
+Algoritmu selection_sort je bilo potrebno  3677.5280343s da sortira nize velicicne 100000 pri cemu je utroseno 1.81933594KB memorije
+Algoritmu      heap_sort je bilo potrebno     3.3148684s da sortira nize velicicne 100000 pri cemu je utroseno 0.18359375KB memorije
+Algoritmu    bucket_sort je bilo potrebno     0.5414797s da sortira nize velicicne 100000 pri cemu je utroseno 1784.38281250KB memorije
+--------------------------------------------------
+Algoritmu      heap_sort je bilo potrebno    49.7961677s da sortira nize velicicne 1000000 pri cemu je utroseno 0.18359375KB memorije
+Algoritmu    bucket_sort je bilo potrebno     1.9157906s da sortira nize velicicne 1000000 pri cemu je utroseno 17426.00000000KB memorije
+--------------------------------------------------
+Algoritmu      heap_sort je bilo potrebno   586.2826250s da sortira nize velicicne 10000000 pri cemu je utroseno 0.18359375KB memorije
+Algoritmu    bucket_sort je bilo potrebno    13.4761546s da sortira nize velicicne 10000000 pri cemu je utroseno 163745.34375000KB memorije
+--------------------------------------------------
+
+Algoritam selection sort ima vremensku složenost O(n^2). Ova složenost je očigledna kada se uporedi vreme potrebno za sortiranje
+niza od 10k i 100k elemenata. Broj elemenata se uvećao 10 puta dok je algoritmu trebalo 100 puta više vremena. Analogno ovome vreme koje bi
+mu bilo potrebno za sortiranje nizova od 1m i 10m elemenata je oko 100 i 10000 sati, respektivno. Prostorna složenost algoritma je O(1).
+
+Algoritam heap sort ima vremensku složenost O(nlogn) i prostornu složenost O(1), što je i dobijeno prilikom testiranja algoritma.
+
+Algoritam bucket sort je pokazao vremensku složenost O(n) i prostornu složenost O(n), što je i teorijski bilo očekivano.
