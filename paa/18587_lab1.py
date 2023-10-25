@@ -91,9 +91,10 @@ def __insertion_sort(arr: List[int]) -> None:
             j -= 1
         arr[j + 1] = tmp
 
+@space_time_monitor
 def bucket_sort(arr: List[int]) -> List[int]:
     arr_max = max(arr)
-    if len(arr) > arr_max:
+    if len(arr) > 100 * arr_max:
         num_buckets = arr_max + 1
         sort_buckets = False
         bucket_range = 1
@@ -169,5 +170,5 @@ if __name__ == '__main__':
     arr_10_000_000 = [random.randint(0, upper_range) for _ in range(10_000_000)]
 
     arrs = [arr_100, arr_1000, arr_10_000, arr_100_000, arr_1_000_000, arr_10_000_000]
-    sorts = [selection_sort, heap_sort, bucket_sort]
+    sorts = [bucket_sort]
     generate_report(arrs, sorts)
