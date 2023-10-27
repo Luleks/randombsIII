@@ -36,10 +36,10 @@ def space_time_monitor(func: Callable) -> None:
 
         report = f'Algoritmu {" " * (max_len_sort_name - len(func.__name__))}'\
                  f'{func.__name__} je bilo potrebno {whole_part}{decimal_part}s '\
-                 f'da sortira nize velicicne {len(arr)} '\
+                 f'da sortira niz velicicne {len(arr)} '\
                  f'pri cemu je utroseno {(mem_used[1]/1024):.8f}KB memorije\n'
 
-        return report, all(arr[i] <= arr[i + 1] for i in range(len(arr) - 1))
+        return report, arr == sorted(arr)
     
     return wrap
 
@@ -120,8 +120,7 @@ def bucket_sort(arr: List[int]) -> List[int]:
 
 def generate_report(arrs: List, sorting_algs: Callable) -> None:
 
-
-    with open('report.txt', 'a+') as f:
+    with open('report.txt', 'w+') as f:
         for arr in arrs:
             for sort_alg in sorting_algs:
                 if sort_alg.__name__ == 'selection_sort' and len(arr) > 100_000:
