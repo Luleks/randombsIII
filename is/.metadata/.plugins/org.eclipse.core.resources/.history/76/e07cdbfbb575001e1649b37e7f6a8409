@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Luka&amp;Jana" created="October 25, 2023 at 4:11:59 PM CEST" modified="October 28, 2023 at 7:18:17 PM CEST" specVersion="16" urnVersion="1.27" nextGlobalID="597">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Luka&amp;Jana" created="October 25, 2023 at 4:11:59 PM CEST" modified="October 28, 2023 at 7:14:34 PM CEST" specVersion="15" urnVersion="1.27" nextGlobalID="563">
   <ucmspec>
     <scenarioGroups name="ScenarioGroup6" id="6">
       <scenarios name="ScenarioDef7" id="7"/>
@@ -73,12 +73,8 @@
     <intElements name="Omogu&#x107;iti glasa&#x10d;ima da svoj glas prepuste ekspertu ili osobi kojoj veruju" id="528" linksSrc="534" type="Goal" refs="529"/>
     <intElements name="Onlajn forum na kojem mogu da se vode anonimne diskusije o izbornim kandidatima" id="536" linksSrc="540" type="Goal" refs="537"/>
     <intElements name="Koristiti ve&#x161;ta&#x10d;ku inteligenciju kako bi se detektovalo mogu&#x107;e manipulisanje glasovima" id="542" linksSrc="546" type="Goal" refs="543"/>
-    <intElements name="Pobolj&#x161;ati format glasanja" id="548" linksDest="552 561 568 582" type="Goal" refs="549"/>
+    <intElements name="Pobolj&#x161;ati format glasanja" id="548" linksDest="552 561" type="Goal" refs="549"/>
     <intElements name="Rangiranje kandidata umesto izbora jednog" id="554" linksSrc="561" type="Goal" refs="555"/>
-    <intElements name="Odr&#x17e;avanje vi&#x161;e rundi, pri &#x10d;emu se na kraju svake izbacuje kandidat sa najmanjim brojem glasova" id="564" linksSrc="568" type="Goal" refs="565"/>
-    <intElements name="Glasanje se odr&#x17e;ava u vreme kada je najvi&#x161;e glasa&#x10d;a slobodno" id="578" linksDest="594 596" linksSrc="582" refs="579"/>
-    <intElements name="Proglasiti dr&#x17e;avni praznik u vreme kada su izbori" id="586" linksSrc="594" type="Goal" refs="587"/>
-    <intElements name="Izbore odr&#x17e;avati u toku vikenda" id="590" linksSrc="596" type="Goal" refs="591"/>
     <links xsi:type="grl:Decomposition" name="Decomposition39" id="39" refs="//@urndef/@specDiagrams.0/@connections.0" dest="20" src="28"/>
     <links xsi:type="grl:Decomposition" name="Decomposition40" id="40" refs="//@urndef/@specDiagrams.0/@connections.1" dest="20" src="30"/>
     <links xsi:type="grl:Decomposition" name="Decomposition41" id="41" refs="//@urndef/@specDiagrams.0/@connections.2" dest="20" src="32"/>
@@ -162,10 +158,6 @@
     <links xsi:type="grl:Contribution" name="Contribution546" id="546" refs="//@urndef/@specDiagrams.0/@connections.79" dest="384" src="542" contribution="SomePositive" quantitativeContribution="75"/>
     <links xsi:type="grl:Contribution" name="Contribution552" id="552" refs="//@urndef/@specDiagrams.0/@connections.80" dest="548" src="205" contribution="SomePositive" quantitativeContribution="66"/>
     <links xsi:type="grl:Decomposition" name="Decomposition561" id="561" refs="//@urndef/@specDiagrams.0/@connections.81" dest="548" src="554"/>
-    <links xsi:type="grl:Decomposition" name="Decomposition568" id="568" refs="//@urndef/@specDiagrams.0/@connections.82" dest="548" src="564"/>
-    <links xsi:type="grl:Contribution" name="Contribution582" id="582" refs="//@urndef/@specDiagrams.0/@connections.83" dest="548" src="578" contribution="SomePositive" quantitativeContribution="50"/>
-    <links xsi:type="grl:Contribution" name="Contribution594" id="594" refs="//@urndef/@specDiagrams.0/@connections.84" dest="578" src="586" contribution="Make" quantitativeContribution="100"/>
-    <links xsi:type="grl:Contribution" name="Contribution596" id="596" refs="//@urndef/@specDiagrams.0/@connections.85" dest="578" src="590" contribution="SomePositive" quantitativeContribution="80"/>
     <groups name="StrategiesGroup4" id="4" strategies="5"/>
     <strategies name="EvaluationStrategy5" id="5" author="Luka&amp;Jana" group="4"/>
     <impactModel/>
@@ -441,29 +433,13 @@
         <metadata name="_width" value="176"/>
         <metadata name="_height" value="76"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef549" id="549" x="1192" y="762" pred="//@urndef/@specDiagrams.0/@connections.80 //@urndef/@specDiagrams.0/@connections.81 //@urndef/@specDiagrams.0/@connections.82 //@urndef/@specDiagrams.0/@connections.83" def="548">
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef549" id="549" x="1192" y="762" pred="//@urndef/@specDiagrams.0/@connections.80 //@urndef/@specDiagrams.0/@connections.81" def="548">
         <metadata name="_width" value="122"/>
         <metadata name="_height" value="50"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef555" id="555" x="1215" y="863" succ="//@urndef/@specDiagrams.0/@connections.81" def="554">
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef555" id="555" x="1222" y="874" succ="//@urndef/@specDiagrams.0/@connections.81" def="554">
         <metadata name="_height" value="64"/>
         <metadata name="_width" value="144"/>
-      </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef565" id="565" x="1378" y="830" succ="//@urndef/@specDiagrams.0/@connections.82" def="564">
-        <metadata name="_width" value="168"/>
-        <metadata name="_height" value="91"/>
-      </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef579" id="579" x="1391" y="717" succ="//@urndef/@specDiagrams.0/@connections.83" pred="//@urndef/@specDiagrams.0/@connections.84 //@urndef/@specDiagrams.0/@connections.85" def="578">
-        <metadata name="_height" value="68"/>
-        <metadata name="_width" value="149"/>
-      </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef587" id="587" x="1603" y="668" succ="//@urndef/@specDiagrams.0/@connections.84" def="586">
-        <metadata name="_height" value="60"/>
-        <metadata name="_width" value="132"/>
-      </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef591" id="591" x="1602" y="765" succ="//@urndef/@specDiagrams.0/@connections.85" def="590">
-        <metadata name="_height" value="54"/>
-        <metadata name="_width" value="132"/>
       </nodes>
       <connections xsi:type="grl:LinkRef" source="29" target="21" link="39"/>
       <connections xsi:type="grl:LinkRef" source="31" target="21" link="40"/>
@@ -647,16 +623,6 @@
         <label deltaX="19" deltaY="-11"/>
       </connections>
       <connections xsi:type="grl:LinkRef" source="555" target="549" link="561"/>
-      <connections xsi:type="grl:LinkRef" source="565" target="549" link="568"/>
-      <connections xsi:type="grl:LinkRef" source="579" target="549" link="582">
-        <label deltaX="-19" deltaY="-19"/>
-      </connections>
-      <connections xsi:type="grl:LinkRef" source="587" target="579" link="594">
-        <label deltaX="-19" deltaY="-10"/>
-      </connections>
-      <connections xsi:type="grl:LinkRef" source="591" target="579" link="596">
-        <label deltaX="17" deltaY="-15"/>
-      </connections>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCMmap3" id="3"/>
   </urndef>
