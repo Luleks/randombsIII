@@ -6,7 +6,7 @@ Algoritmu selection_sort je bilo potrebno     0.3396778s da sortira niz velicicn
 Algoritmu      heap_sort je bilo potrebno     0.0086317s da sortira niz velicicne 1000 pri cemu je utroseno 0.15625000KB memorije
 Algoritmu    bucket_sort je bilo potrebno     0.0024318s da sortira niz velicicne 1000 pri cemu je utroseno 16.41406250KB memorije
 --------------------------------------------------
-Algoritmu selection_sort je bilo potrebno    46.5861757s da sortira niz velicicne 10000 pri cemu je utroseno 0.27734375KB memorije
+Algoritmu selection_sort je bilo potrebno    36.5861757s da sortira niz velicicne 10000 pri cemu je utroseno 0.27734375KB memorije
 Algoritmu      heap_sort je bilo potrebno     0.2551538s da sortira niz velicicne 10000 pri cemu je utroseno 0.18359375KB memorije
 Algoritmu    bucket_sort je bilo potrebno     0.0470272s da sortira niz velicicne 10000 pri cemu je utroseno 180.31250000KB memorije
 --------------------------------------------------

@@ -45,7 +45,7 @@ def space_time_monitor(func: Callable) -> None:
 
 
 @space_time_monitor
-def selection_sort(arr: List[int]) -> None:
+def selection_sort(arr: List[int]) -> List[int]:
     for i in range(len(arr) - 1):
         min = i
         for j in range(i + 1, len(arr)):
@@ -58,8 +58,8 @@ def selection_sort(arr: List[int]) -> None:
 def __heapify(arr: List[int], i: int, max_len: int=None) -> None:
     length = max_len or len(arr)
     element = arr[i]
-    while 2 * i < length:
-        child = 2 * i
+    while 2 * i + 1 < length:
+        child = 2 * i + 1
         if child + 1 < length and arr[child + 1] > arr[child]:
             child += 1
         if arr[child] > element:
@@ -74,7 +74,7 @@ def __build_heap(arr: List[int]) -> None:
         __heapify(arr, i)
 
 @space_time_monitor
-def heap_sort(arr: List[int]) -> None:
+def heap_sort(arr: List[int]) -> List[int]:
     __build_heap(arr)
     for i in range(len(arr) - 1, 0, -1):
         arr[0], arr[i] = arr[i], arr[0]
