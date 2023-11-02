@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_noCEQHj0Ee6PyqH7PcTF1w" name="IS">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_ntDHIHj0Ee6PyqH7PcTF1w">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+</uml:Model>
