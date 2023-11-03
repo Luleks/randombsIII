@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:style="http://www.eclipse.org/papyrus/infra/gmfdiag/style" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mPdpIHpEEe6AcdPV0TzmUw" type="PapyrusUMLSequenceDiagram" name="Sequence Diagram" measurementUnit="Pixel">
+  <children xmi:type="notation:Shape" xmi:id="_mPdpIXpEEe6AcdPV0TzmUw" type="Interaction_Shape">
+    <children xmi:type="notation:DecorationNode" xmi:id="_mPdpInpEEe6AcdPV0TzmUw" type="Interaction_NameLabel"/>
+    <children xmi:type="notation:BasicCompartment" xmi:id="_mPdpI3pEEe6AcdPV0TzmUw" type="Interaction_SubfragmentCompartment">
+      <children xmi:type="notation:Shape" xmi:id="_Ddis4HpFEe6AcdPV0TzmUw" type="Lifeline_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_DdjT8HpFEe6AcdPV0TzmUw" type="Lifeline_NameLabel"/>
+        <element xmi:type="uml:Lifeline" href="model3.uml#_DdebcHpFEe6AcdPV0TzmUw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ddis4XpFEe6AcdPV0TzmUw" x="54" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_KVElYHpFEe6AcdPV0TzmUw" type="Lifeline_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_KVElYnpFEe6AcdPV0TzmUw" type="Lifeline_NameLabel"/>
+        <element xmi:type="uml:Lifeline" href="model3.uml#_KU_s4HpFEe6AcdPV0TzmUw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KVElYXpFEe6AcdPV0TzmUw" x="254" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_K_cYEHpFEe6AcdPV0TzmUw" type="Lifeline_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_K_cYEnpFEe6AcdPV0TzmUw" type="Lifeline_NameLabel"/>
+        <element xmi:type="uml:Lifeline" href="model3.uml#_K_WRcHpFEe6AcdPV0TzmUw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_K_cYEXpFEe6AcdPV0TzmUw" x="434" y="10"/>
+      </children>
+      <children xmi:type="notation:Shape" xmi:id="_fj1MsHpGEe6AcdPV0TzmUw" type="Lifeline_Shape">
+        <children xmi:type="notation:DecorationNode" xmi:id="_fj1MsnpGEe6AcdPV0TzmUw" type="Lifeline_NameLabel"/>
+        <children xmi:type="notation:Shape" xmi:id="_ih_m8HpGEe6AcdPV0TzmUw" type="ActionExecutionSpecification_Shape">
+          <element xmi:type="uml:ActionExecutionSpecification" href="model3.uml#_ih6ucHpGEe6AcdPV0TzmUw"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ih_m8XpGEe6AcdPV0TzmUw" x="70" y="26" width="20" height="561"/>
+        </children>
+        <element xmi:type="uml:Lifeline" href="model3.uml#_fjyJYHpGEe6AcdPV0TzmUw"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fj1MsXpGEe6AcdPV0TzmUw" x="614" y="10" width="161"/>
+      </children>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mPdpJHpEEe6AcdPV0TzmUw"/>
+    </children>
+    <element xmi:type="uml:Interaction" href="model3.uml#_mPNxgHpEEe6AcdPV0TzmUw"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_mPdpJXpEEe6AcdPV0TzmUw"/>
+  </children>
+  <styles xmi:type="notation:StringValueStyle" xmi:id="_mPdpJnpEEe6AcdPV0TzmUw" name="diagram_compatibility_version" stringValue="1.4.0"/>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_mPdpJ3pEEe6AcdPV0TzmUw"/>
+  <styles xmi:type="style:PapyrusDiagramStyle" xmi:id="_mPdpKHpEEe6AcdPV0TzmUw" diagramKindId="org.eclipse.papyrus.uml.diagram.sequence">
+    <owner xmi:type="uml:Model" href="model3.uml#_mOBesHpEEe6AcdPV0TzmUw"/>
+  </styles>
+  <element xmi:type="uml:Interaction" href="model3.uml#_mPNxgHpEEe6AcdPV0TzmUw"/>
+</notation:Diagram>

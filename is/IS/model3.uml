@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_mOBesHpEEe6AcdPV0TzmUw" name="model3">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_mS0fIHpEEe6AcdPV0TzmUw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_mPNxgHpEEe6AcdPV0TzmUw" name="Interaction1">
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_DdebcHpFEe6AcdPV0TzmUw" name="Glasač"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_KU_s4HpFEe6AcdPV0TzmUw" name="Pošta"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_K_WRcHpFEe6AcdPV0TzmUw" name="Mobilni provajder"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_fjyJYHpGEe6AcdPV0TzmUw" name="Republička izborna komisija" coveredBy="_ih7VgHpGEe6AcdPV0TzmUw _ih6ucHpGEe6AcdPV0TzmUw _ih7VgXpGEe6AcdPV0TzmUw"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_ih7VgHpGEe6AcdPV0TzmUw" name="ActionExecutionSpecification5Start" covered="_fjyJYHpGEe6AcdPV0TzmUw" execution="_ih6ucHpGEe6AcdPV0TzmUw"/>
+    <fragment xmi:type="uml:ActionExecutionSpecification" xmi:id="_ih6ucHpGEe6AcdPV0TzmUw" name="ActionExecutionSpecification5" covered="_fjyJYHpGEe6AcdPV0TzmUw" finish="_ih7VgXpGEe6AcdPV0TzmUw" start="_ih7VgHpGEe6AcdPV0TzmUw"/>
+    <fragment xmi:type="uml:ExecutionOccurrenceSpecification" xmi:id="_ih7VgXpGEe6AcdPV0TzmUw" name="ActionExecutionSpecification5Finish" covered="_fjyJYHpGEe6AcdPV0TzmUw" execution="_ih6ucHpGEe6AcdPV0TzmUw"/>
+  </packagedElement>
+</uml:Model>

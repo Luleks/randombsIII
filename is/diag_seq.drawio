@@ -1,0 +1,603 @@
+<mxfile host="app.diagrams.net" modified="2023-11-03T18:22:27.847Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0" etag="fzG47M8aLdFDriAX2yGx" version="22.0.8" type="device">
+  <diagram name="Page-1" id="13e1069c-82ec-6db2-03f1-153e76fe0fe0">
+    <mxGraphModel dx="2632" dy="1632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="V5PGv7wzICx98JLNbhtM-1" value="&lt;div&gt;Glasač&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="-550" y="-520" width="100" height="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-1" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="45" y="850" width="10" height="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-16" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="50" y="970" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-17" value="&lt;div&gt;Popunjavanje obrasca&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="950" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="950" />
+              <mxPoint x="80" y="970" />
+            </Array>
+            <mxPoint x="55" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-67" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="50" y="2230" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-68" value="Pristup servisu" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="-0.0041" relative="1" as="geometry">
+            <mxPoint x="55" y="2210" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="2210" />
+              <mxPoint x="80" y="2230" />
+            </Array>
+            <mxPoint x="55" y="2230" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-71" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="50" y="2390" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-72" value="Glasanje" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="V5PGv7wzICx98JLNbhtM-1">
+          <mxGeometry x="-0.0041" relative="1" as="geometry">
+            <mxPoint x="55" y="2370" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="2370" />
+              <mxPoint x="80" y="2390" />
+            </Array>
+            <mxPoint x="55" y="2390" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-2" value="&lt;div&gt;Pošta&lt;/div&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="-290" y="-520" width="100" height="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-29" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-2" vertex="1">
+          <mxGeometry x="45" y="260" width="10" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-33" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-2" vertex="1">
+          <mxGeometry x="50" y="300" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-34" value="&lt;div&gt;Prijem zahteva&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-2" edge="1">
+          <mxGeometry x="-0.8751" y="10" relative="1" as="geometry">
+            <mxPoint x="55" y="280" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="85" y="280" />
+              <mxPoint x="85" y="300" />
+            </Array>
+            <mxPoint x="55" y="300" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-35" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-2" vertex="1">
+          <mxGeometry x="50" y="400" width="10" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-36" value="Dostava pošte" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-2" edge="1">
+          <mxGeometry x="-0.8751" y="10" relative="1" as="geometry">
+            <mxPoint x="55" y="380" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="85" y="380" />
+              <mxPoint x="85" y="400" />
+            </Array>
+            <mxPoint x="55" y="400" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-3" value="Mobilni provajder" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="300" y="-520" width="100" height="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-43" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-3" vertex="1">
+          <mxGeometry x="45" y="390" width="10" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-45" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-3" vertex="1">
+          <mxGeometry x="50" y="420" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-46" value="&lt;div&gt;Prijem zahteva&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-3" edge="1">
+          <mxGeometry x="-0.8751" y="10" relative="1" as="geometry">
+            <mxPoint x="55" y="400" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="90" y="400" />
+              <mxPoint x="90" y="420" />
+            </Array>
+            <mxPoint x="55" y="420" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-47" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-3" vertex="1">
+          <mxGeometry x="50" y="480" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-48" value="Obezbeđivanje poruka" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-3" edge="1">
+          <mxGeometry x="-0.8751" y="10" relative="1" as="geometry">
+            <mxPoint x="55" y="460" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="90" y="460" />
+              <mxPoint x="90" y="480" />
+            </Array>
+            <mxPoint x="55" y="480" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-4" value="Republička izborna komisija" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="30" y="-520" width="100" height="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-6" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-4" vertex="1">
+          <mxGeometry x="45" y="55" width="10" height="2745" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-7" value="&lt;div&gt;Slanje obaveštenja&lt;/div&gt;" style="html=1;verticalAlign=bottom;startArrow=oval;endArrow=block;startSize=8;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" parent="V5PGv7wzICx98JLNbhtM-4" target="V5PGv7wzICx98JLNbhtM-6" edge="1">
+          <mxGeometry x="-0.3846" y="-20" relative="1" as="geometry">
+            <mxPoint x="-20" y="60" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="10" y="60" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-8" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-4" vertex="1">
+          <mxGeometry x="50" y="120" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-9" value="Određivanje načina" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="100" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="100" />
+              <mxPoint x="80" y="120" />
+            </Array>
+            <mxPoint x="55" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-22" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="V5PGv7wzICx98JLNbhtM-4" vertex="1">
+          <mxGeometry x="50" y="760" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-23" value="Slanje mejlova" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="V5PGv7wzICx98JLNbhtM-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="740" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="740" />
+              <mxPoint x="80" y="760" />
+            </Array>
+            <mxPoint x="55" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-78" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="V5PGv7wzICx98JLNbhtM-4">
+          <mxGeometry x="50" y="2580" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-79" value="Analiza glasova" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="V5PGv7wzICx98JLNbhtM-4">
+          <mxGeometry x="0.0067" relative="1" as="geometry">
+            <mxPoint x="55" y="2560" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="2560" />
+              <mxPoint x="80" y="2580" />
+            </Array>
+            <mxPoint x="55" y="2580" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-10" value="par" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" parent="1" vertex="1">
+          <mxGeometry x="-80" y="-330" width="340" height="620" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-13" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="80" y="-300" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-14" value="Pribavljanje adresa" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="-320" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="110" y="-320" />
+              <mxPoint x="110" y="-300" />
+            </Array>
+            <mxPoint x="85" y="-300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-16" value="&lt;div&gt;Dostavljanje adresa&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;startSize=5;" parent="1" target="V5PGv7wzICx98JLNbhtM-2" edge="1">
+          <mxGeometry x="-0.5674" width="80" relative="1" as="geometry">
+            <mxPoint x="-85" y="-260" as="sourcePoint" />
+            <mxPoint x="-150.18965517241372" y="-260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-40" y="-260" />
+              <mxPoint x="80" y="-260" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-17" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="80" y="-190" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-18" value="Pribavljanje brojeva telefona" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="-210" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="110" y="-210" />
+              <mxPoint x="110" y="-190" />
+            </Array>
+            <mxPoint x="85" y="-190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-19" value="Dostavljanje brojeva" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" parent="1" target="V5PGv7wzICx98JLNbhtM-3" edge="1">
+          <mxGeometry x="-0.4063" width="80" relative="1" as="geometry">
+            <mxPoint x="80" y="-130" as="sourcePoint" />
+            <mxPoint x="160" y="-130" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-20" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="80" y="160" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-21" value="Pribavljanje mejl adresa" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="140" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="110" y="140" />
+              <mxPoint x="110" y="160" />
+            </Array>
+            <mxPoint x="85" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-24" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=-0.007;exitY=0.204;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.204;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-79.99999999999989" y="-240.2800000000001" as="sourcePoint" />
+            <mxPoint x="261.0200000000001" y="-240.2800000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-25" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=-0.007;exitY=0.204;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.996;entryY=0.204;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-79.99999999999989" y="119.99999999999991" as="sourcePoint" />
+            <mxPoint x="261.0200000000001" y="119.99999999999991" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-26" value="[Poštom]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="-330" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-27" value="[Telefonom]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-30" y="-235" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-28" value="&lt;div&gt;[Mejlom]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-20" y="128" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-39" value="Dostava izvršena" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-241.35333333333327" y="310" as="sourcePoint" />
+            <mxPoint x="78.98" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-49" value="Potvrdno obaveštenje" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" parent="1" target="V5PGv7wzICx98JLNbhtM-6" edge="1">
+          <mxGeometry x="0.4329" relative="1" as="geometry">
+            <mxPoint x="349.5" y="20" as="sourcePoint" />
+            <mxPoint x="160" y="20" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-51" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="1" vertex="1">
+          <mxGeometry x="80" y="60" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="V5PGv7wzICx98JLNbhtM-52" value="Slanje SMS poruka" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="40" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="110" y="40" />
+              <mxPoint x="110" y="60" />
+            </Array>
+            <mxPoint x="85" y="60" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-3" value="Biračko mesto" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-900" y="-520" width="100" height="2770" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-26" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-XHbt7nGsMdzEizq7wiN-3">
+          <mxGeometry x="45" y="1240" width="10" height="850" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-40" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-XHbt7nGsMdzEizq7wiN-3">
+          <mxGeometry x="50" y="1660" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-41" value="Analiza primedbe" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="-XHbt7nGsMdzEizq7wiN-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="1640" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="85" y="1640" />
+              <mxPoint x="85" y="1660" />
+            </Array>
+            <mxPoint x="55" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-4" value="Početak glasanja" style="html=1;verticalAlign=bottom;startArrow=circle;startFill=1;endArrow=open;startSize=6;endSize=8;curved=0;rounded=0;" edge="1" parent="1" target="-XHbt7nGsMdzEizq7wiN-1">
+          <mxGeometry x="0.5385" width="80" relative="1" as="geometry">
+            <mxPoint x="90" y="330.0000000000002" as="sourcePoint" />
+            <mxPoint x="-480" y="330.0000000000002" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-5" value="&lt;div&gt;Alt&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-650" y="350" width="300" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-9" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="385" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-10" value="Pristup internet servisu" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-495" y="365" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="365" />
+              <mxPoint x="-470" y="385" />
+            </Array>
+            <mxPoint x="-495" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-18" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-650" y="760" as="sourcePoint" />
+            <mxPoint x="-350" y="760" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-500" y="760" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-19" value="&lt;div&gt;[Prepuštanje glasa]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-645" y="380" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-20" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-680" y="560" width="360" height="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-22" value="[Glasanje uživo]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-625" y="580" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-24" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="610" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-25" value="&lt;div&gt;Odlazak na biračko mesto&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-495" y="590" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="590" />
+              <mxPoint x="-470" y="610" />
+            </Array>
+            <mxPoint x="-495" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-27" value="&lt;div&gt;par&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-650" y="660" width="300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-28" value="Potvrda identiteta" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5" width="80" relative="1" as="geometry">
+            <mxPoint x="-505" y="719.9999999999995" as="sourcePoint" />
+            <mxPoint x="-845" y="719.9999999999995" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-29" value="Izborni listić" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5588" relative="1" as="geometry">
+            <mxPoint x="-840" y="790" as="sourcePoint" />
+            <mxPoint x="-500" y="790" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-30" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="825" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-31" value="Glasanje" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-495" y="805" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="805" />
+              <mxPoint x="-470" y="825" />
+            </Array>
+            <mxPoint x="-495" y="825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-32" value="Ubacivanje listića" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" source="-XHbt7nGsMdzEizq7wiN-1">
+          <mxGeometry x="0.5224" width="80" relative="1" as="geometry">
+            <mxPoint x="-510" y="870" as="sourcePoint" />
+            <mxPoint x="-840" y="870" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-33" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-650" y="930" width="300" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-34" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="970" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-35" value="&lt;div&gt;Primećivanje&lt;/div&gt;&lt;div&gt;nepravilnosti&lt;br&gt;&lt;/div&gt;" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-495" y="950" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="950" />
+              <mxPoint x="-470" y="970" />
+            </Array>
+            <mxPoint x="-495" y="970" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-36" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="1040" width="10" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-37" value="Pisanje primedbe" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-495" y="1020" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="1020" />
+              <mxPoint x="-470" y="1040" />
+            </Array>
+            <mxPoint x="-495" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-38" value="Prosleđivanje prirmedbe" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5" width="80" relative="1" as="geometry">
+            <mxPoint x="-500" y="1079.9999999999995" as="sourcePoint" />
+            <mxPoint x="-840" y="1079.9999999999995" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-39" value="Obezbeđivanje bezbednosti" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5588" relative="1" as="geometry">
+            <mxPoint x="-840" y="1100" as="sourcePoint" />
+            <mxPoint x="-500" y="1100" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-42" value="break" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-890" y="1230" width="540" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-43" value="Nema nepravilnosti" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5588" relative="1" as="geometry">
+            <mxPoint x="-840" y="1275" as="sourcePoint" />
+            <mxPoint x="-500" y="1275" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-46" value="&lt;div&gt;alt&lt;/div&gt;" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-960" y="1185" width="700" height="445" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-48" value="Primećena nepravilnost" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="V5PGv7wzICx98JLNbhtM-6">
+          <mxGeometry x="0.6432" width="80" relative="1" as="geometry">
+            <mxPoint x="-850" y="1380" as="sourcePoint" />
+            <mxPoint x="-770" y="1380" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-49" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=-0.018;exitY=-0.005;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="-XHbt7nGsMdzEizq7wiN-61">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-935" y="1350" as="sourcePoint" />
+            <mxPoint x="-257" y="1350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-785" y="1350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-50" value="Baza podataka" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="560" y="-520" width="100" height="2850" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-51" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry x="45" y="1910" width="10" height="690" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-55" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry x="50" y="1960" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-56" value="Anuliranje glasanja" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="1940" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="85" y="1940" />
+              <mxPoint x="85" y="1960" />
+            </Array>
+            <mxPoint x="55" y="1960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-75" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry x="50" y="2490" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-76" value="Beleženje glasa" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="55" y="2470" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="85" y="2470" />
+              <mxPoint x="85" y="2490" />
+            </Array>
+            <mxPoint x="55" y="2490" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-52" value="Beleženje glasačkog mesta" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry x="0.4731" width="80" relative="1" as="geometry">
+            <mxPoint x="80" y="1400" as="sourcePoint" />
+            <mxPoint x="160" y="1400" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-58" value="&lt;div&gt;Glasovi anulirani&lt;/div&gt;" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.5424" relative="1" as="geometry">
+            <mxPoint x="604.5" y="1490" as="sourcePoint" />
+            <mxPoint x="80" y="1490" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-59" value="Preusmeravanje glasača" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.193" width="80" relative="1" as="geometry">
+            <mxPoint x="70" y="1520" as="sourcePoint" />
+            <mxPoint x="-500" y="1520" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-60" value="&lt;div&gt;[Nepravilnost]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-625" y="960" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-61" value="[Neperavilnost]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-960" y="1350" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-63" value="Zatvaranje glasačkog mesta" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="-XHbt7nGsMdzEizq7wiN-26">
+          <mxGeometry x="-0.4754" width="80" relative="1" as="geometry">
+            <mxPoint x="70" y="1560" as="sourcePoint" />
+            <mxPoint x="-500" y="1560" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-64" value="" style="shape=umlDestroy;whiteSpace=wrap;html=1;strokeWidth=3;targetShapes=umlLifeline;" vertex="1" parent="1">
+          <mxGeometry x="-865" y="1590" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-65" value="" style="endArrow=none;dashed=1;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-680" y="1670" as="sourcePoint" />
+            <mxPoint x="-320" y="1670" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-658" y="1670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-66" value="[Glasanje preko interneta]" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-685" y="1670" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-69" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="-500" y="1790" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-70" value="Potvrda identiteta" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="-0.0041" relative="1" as="geometry">
+            <mxPoint x="-495" y="1770" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="-470" y="1770" />
+              <mxPoint x="-470" y="1790" />
+            </Array>
+            <mxPoint x="-495" y="1790" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-73" value="Glas" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1" target="-XHbt7nGsMdzEizq7wiN-50">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="-500" y="1940" as="sourcePoint" />
+            <mxPoint x="-420" y="1940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-77" value="Presek glasova" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="605.68" y="2020" as="sourcePoint" />
+            <mxPoint x="80.00352941176442" y="2020" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-80" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="2125" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-81" value="" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" vertex="1" parent="1">
+          <mxGeometry x="80" y="2170" width="10" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-82" value="Pokretanje istrage" style="html=1;align=left;spacingLeft=2;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry x="0.0067" relative="1" as="geometry">
+            <mxPoint x="85" y="2150" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="110" y="2150" />
+              <mxPoint x="110" y="2170" />
+            </Array>
+            <mxPoint x="85" y="2170" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-83" value="&lt;div&gt;[Detektovana&amp;nbsp;&lt;/div&gt;&lt;div&gt;manipulacija]&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-65" y="2150" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-XHbt7nGsMdzEizq7wiN-84" value="Potvrda glasa" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="80" y="2030" as="sourcePoint" />
+            <mxPoint x="-490" y="2030" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
