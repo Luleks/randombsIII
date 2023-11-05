@@ -1,5 +1,30 @@
 import sympy
+import random
+from functools import wraps
+import time
+from typing import Callable
 
+
+def exact_match(func: Callable, *args):
+    @wraps(func)
+    def wrap(*args):
+        target_string_word_count = len(args[0].split(' '))
+        target_string = args[0].replace(' ', '')
+        start_time = time.perf_counter()
+
+        inds = func(target_string, *args[1:])
+
+        end_time = time.perf_counter()
+        with open(f'{func.__name__}_{target_string_word_count}_{len(args[1])}.txt', 'w+') as f:
+            for ind in inds:
+                f.write(f'{ind} ')
+
+        return f'{func.__name__} je izvrsio pattern matching nad stringom duzine {len(target_string)}'\
+               f' i patternom duzine {len(args[1])} za {(end_time - start_time):.3f} sekundi'
+    return wrap
+
+
+@exact_match
 def rabin_karp(target_string: str, pattern: str, alphabet: dict):
 
     alphabet_size = len(alphabet)
@@ -9,6 +34,8 @@ def rabin_karp(target_string: str, pattern: str, alphabet: dict):
     h = (alphabet_size ** (m - 1)) % q
     p = 0
     t = 0
+
+    indexes = []
 
     for i, letter in enumerate(pattern):
         p = (alphabet_size * p + alphabet[letter]) % q  
@@ -21,7 +48,7 @@ def rabin_karp(target_string: str, pattern: str, alphabet: dict):
             while j < m and target_string[ind + j] == pattern[j]:
                 j += 1
             if j == m:
-                print(ind)
+                indexes.append(ind)
         t = (alphabet_size * (t - h * alphabet[target_string[ind]]) + alphabet[target_string[i]]) % q
         ind += 1
 
@@ -30,7 +57,9 @@ def rabin_karp(target_string: str, pattern: str, alphabet: dict):
         while j < m and target_string[ind + j] == pattern[j]:
             j += 1
         if j == m:
-            print(ind)
+            indexes.append(ind)
+
+    return indexes
 
 
 def failure_func(pattern: str) -> list[int]:
@@ -45,9 +74,13 @@ def failure_func(pattern: str) -> list[int]:
         pi[i] = j
     return pi
 
+
+@exact_match
 def knuth_morris_pratt(target_string: str, pattern: str):
     pi = failure_func(pattern)
     j = -1
+
+    indexes = []
 
     i = 0
     while i < len(target_string):
@@ -55,14 +88,14 @@ def knuth_morris_pratt(target_string: str, pattern: str):
             i += 1
             j += 1        
             if j + 1 == len(pattern):
-                print(i - len(pattern))
+                indexes.append(i - len(pattern))
                 j = pi[j]
         else:
             if j == -1:
                 i += 1
             else:
                 j = pi[j]
-
+    return indexes
 
 letter_to_number = {
     'b': 1, 'f': 1, 'p': 1, 'v': 1,
@@ -119,7 +152,7 @@ def levenshtein(str1: str, str2: str) -> int:
     
     return matrix[len(str1)][len(str2)]
 
-levenshtein('sitting', 'kitten')
+# levenshtein('sitting', 'kitten')
 
 # ascii_dict = {chr(i):i for i in range(128)}
 
@@ -128,4 +161,25 @@ levenshtein('sitting', 'kitten')
 
 # rabin_karp(target, pattern, ascii_dict)
 # knuth_morris_pratt(target, pattern)
+
+letters_ascii = {chr(i):i for i in range(128)}
+letters_hex = {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, 
+               '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 
+               'C': 12, 'D': 13, 'E': 14, 'F': 15}
+
+pattern_sizes = [5, 10, 20, 50]
+
+patterns_ascii = [''.join(random.choice(list(letters_ascii.keys())) for _ in range(size)) for size in pattern_sizes]
+patterns_hex = [''.join(random.choice(list(letters_hex.keys())) for _ in range(size)) for size in pattern_sizes]
+
+alphabets = {'hex': (letters_hex, patterns_hex)}
+sizes = [100, 1000, 10_000, 100_000]
+
+for size in sizes:
+    for name, (alphabet, patterns) in alphabets.items():
+        with open(f'{name}_{size}.txt', 'r') as f:
+            target_string = f.read()
+            for pattern in patterns:
+                print(rabin_karp(target_string, pattern, alphabet))
+                print(knuth_morris_pratt(target_string, pattern))
 

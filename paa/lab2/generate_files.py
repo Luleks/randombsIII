@@ -14,4 +14,4 @@ for size in sizes:
             for _ in range(size):
                 word_length = random.randint(1, 100)
                 random_word = ''.join(random.choice(alphabet) for _ in range(word_length))
-                f.write(f'{random_word}{" "}')
+                f.write(f'{random_word} ')
