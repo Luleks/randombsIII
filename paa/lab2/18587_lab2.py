@@ -1,7 +1,5 @@
 import sympy
 import time
-import random
-import math
 
 
 def rabin_karp(target_string: str, pattern: str, alphabet: dict):
@@ -63,26 +61,35 @@ def levenshtein(str1: str, str2: str) -> int:
 # cases = [(target_string, pattern, alphabet)]
 def test_rabin_karp(cases: list[tuple]):
 
-    with open('report.txt', 'w+') as f:
-        for case in cases:
-            target_string, pattern, alphabet = case
-            start_time = time.perf_counter()
+    with open('RK_report.txt', 'w+') as f:
+        with open('RK_indeksi.txt', 'w+') as t:
+            for case in cases:
+                target_string, pattern, alphabet = case
+                start_time = time.perf_counter()
 
-            indexes = rabin_karp(target_string, pattern, alphabet['alphabet'])
+                indexes = rabin_karp(target_string, pattern, alphabet['alphabet'])
 
-            end_time = time.perf_counter()
-            total_time = end_time - start_time
+                end_time = time.perf_counter()
+                total_time = end_time - start_time
 
-            f.write(f'{alphabet["name"]} len(target_string)={len(target_string.split(" ")) - 1} '\
-                    f'len(pattern)={len(pattern)} total_time={total_time:.3f}s '\
-                    f'Pojavljivanja: {indexes}. Br pojavljivanja {len(indexes)}\n')
+
+                f.write(f'{alphabet["name"]} len(target_string)={len(target_string.split(" ")) - 1} '\
+                        f'len(pattern)={len(pattern)} br_pojavljivanja: {len(indexes)} total_time={total_time:.3f}s\n')
+                
+                t.write(f'len(target_string)={len(target_string.split(" ")) - 1}. Pattern: {pattern}. Br_pojava: {len(indexes)}\n')
+                n_iter = len(indexes) // 10
+                for i in range(n_iter):
+                    t.write(f'{indexes[10 * i: 10 + 10 * i]}\n')
+                if len(indexes) % 10 != 0:
+                    t.write(f'{indexes[n_iter * 10:]}\n')
+                t.write('-' * 30 + '\n')
 
 
 # cases = [(str1, str2, alphabet)]
 def test_levenhstein(cases: list[tuple]):
 
-    with open('reportLevenhstein.txt', 'w+') as f:
-        with open('manjeOdTri.txt', 'w+') as t:
+    with open('LE_report.txt', 'w+') as f:
+        with open('LE_words.txt', 'w+') as t:
             for case in cases:
                 str1, str2, alphabet = case
                 words = str1.split(' ')
@@ -97,42 +104,38 @@ def test_levenhstein(cases: list[tuple]):
                 end_time = time.perf_counter()
                 total_time = end_time - start_time
                 f.write(f'{alphabet["name"]} len(target_string)={len(words) - 1} '\
-                        f'len(pattern)={len(str2)} total_time={total_time:.3f}s\n')
+                        f'len(pattern)={len(str2)} br_reci={len(three_or_less)} total_time={total_time:.3f}s\n')
                 
-                t.write(f'len(target_string)={len(words) - 1}. Pattern: {str2}. <=3: {len(three_or_less)}\n')
+                t.write(f'len(target_string)={len(words) - 1}. Pattern: {str2}. Br reci sa udaljenih <= 3: {len(three_or_less)}\n')
                 n_iter = len(three_or_less) // 10
                 for i in range(n_iter):
-                    t.write(f'{three_or_less[i: 10 + 10 * i]}\n')
-                t.write(f'{three_or_less[n_iter * 10:]}\n')
+                    t.write(f'{three_or_less[10 * i: 10 + 10 * i]}\n')
+                if len(three_or_less) % 10 != 0:
+                    t.write(f'{three_or_less[n_iter * 10:]}\n')
                 t.write('-' * 30 + '\n')
 
 
 if __name__ == '__main__':
     # Rabin Karp
-    alphabets_with_sep = {'ascii': {chr(i):i for i in range(128)},
+    alphabets = {'ascii': {chr(i):i for i in range(255)},
                  'hex': {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, 
                '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 
                'C': 12, 'D': 13, 'E': 14, 'F': 15, ' ': 16}}
-    
-    alphabets = {'ascii': {chr(i):i for i in range(128) if chr(i) != ' '},
-                 'hex': {'0': 0, '1': 1, '2': 2, '3': 3, '4': 4, '5': 5, 
-               '6': 6, '7': 7, '8': 8, '9': 9, 'A': 10, 'B': 11, 
-               'C': 12, 'D': 13, 'E': 14, 'F': 15}}
 
-    pattern_sizes = [5, 10, 20, 50]
-    
-    sizes = [100, 1000]
+    patterns_sizes = [5, 10, 20, 50]
+    patterns = {'ascii': ['OpQrS', 'thislen10!', 'thislen10not10but20!', 'thislen10not10but20not20but50ThIsLon2~@#!~!./,*-//'],
+                'hex': ['12345', 'A987654321', '1234456789AABCDEF0DD', '5D3E0C9B1D7A5F4C2E8A3B4D6F9E1ADD0FEDCBBAA987654321']}
+
+    sizes = [100, 1000, 10000, 100000]
 
     cases = []
     for name, alphabet in alphabets.items():
             for size in sizes:
                 file = f'{name}_{size}.txt'
-                with open(file, 'r') as f:
+                with open(file, 'r', encoding='utf-8') as f:
                     target_string = f.read()
-                    
-                    patterns = [''.join(random.choice(list(alphabet.keys())) for _ in range(size)) for size in pattern_sizes]
-                    for pattern in patterns:
-                        cases.append((target_string, pattern, {'name': name, 'alphabet': alphabets_with_sep[name]}))
+                    for pattern in patterns[name]:
+                        cases.append((target_string, pattern, {'name': name, 'alphabet': alphabets[name]}))
     
     test_rabin_karp(cases)
 
@@ -141,10 +144,8 @@ if __name__ == '__main__':
     for name, alphabet in alphabets.items():
             for size in sizes:
                 file = f'{name}_{size}.txt'
-                with open(file, 'r') as f:
+                with open(file, 'r', encoding='utf-8') as f:
                     target_string = f.read()
-                    
-                    patterns = [''.join(random.choice(list(alphabet.keys())) for _ in range(size)) for size in pattern_sizes]
-                    for pattern in patterns:
-                        cases.append((target_string, pattern, {'name': name, 'alphabet': alphabets_with_sep[name]}))
+                    for pattern in patterns[name]:
+                        cases.append((target_string, pattern, {'name': name, 'alphabet': alphabets[name]}))
     test_levenhstein(cases)
