@@ -66,12 +66,7 @@ class BinomialHeap:
         heap = BinomialHeap.merge(heap1, heap2)
         if heap.head is None:
             return heap
-        BinomialHeap.unite(heap, None, heap.head, heap.head.sibling)
-
-        return heap
-    
-    @staticmethod
-    def unite(heap: "BinomialHeap", prev: HeapNode, temp: HeapNode, next: HeapNode):
+        prev, temp, next = None, heap.head, heap.head.sibling    
         while next:
             if temp.degree != next.degree or (next.sibling is not None and next.sibling.degree == temp.degree):
                 prev, temp = temp, next
@@ -85,11 +80,15 @@ class BinomialHeap:
                     heap.head = next    
                 HeapNode.binomial_link(temp, next)
                 temp = next
-            next = temp.sibling      
+            next = temp.sibling
+        return heap
     
     def insert(self, val):
-        self.head = HeapNode(val, 0, None, None, self.head)
-        BinomialHeap.unite(self, None, self.head, self.head.sibling)
+        new_node = HeapNode(val, 0, None, None, None)
+        heap = BinomialHeap()
+        heap.head = new_node
+        new_heap = BinomialHeap.union(self, heap)
+        self.head = new_heap.head
 
     def print_heap(self):
 

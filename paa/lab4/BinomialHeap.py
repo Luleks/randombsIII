@@ -24,7 +24,7 @@ class BinomialHeap:
     def __init__(self):
         self.head: HeapNode | None = None
 
-    def find_min(self) -> HeapNode | None:
+    def find_max(self) -> HeapNode | None:
         if self.head is None:
             return None
         elif self.head.sibling is None:
@@ -32,7 +32,7 @@ class BinomialHeap:
         min_node = self.head
         temp = self.head.sibling
         while temp:
-            if temp.key < min_node.key:
+            if temp.key > min_node.key:
                 min_node = temp
             temp = temp.sibling
         return min_node
@@ -66,11 +66,16 @@ class BinomialHeap:
         heap = BinomialHeap.merge(heap1, heap2)
         if heap.head is None:
             return heap
-        prev, temp, next = None, heap.head, heap.head.sibling    
+        BinomialHeap.unite(heap, None, heap.head, heap.head.sibling)
+
+        return heap
+    
+    @staticmethod
+    def unite(heap: "BinomialHeap", prev: HeapNode, temp: HeapNode, next: HeapNode):
         while next:
             if temp.degree != next.degree or (next.sibling is not None and next.sibling.degree == temp.degree):
                 prev, temp = temp, next
-            elif temp.key <= next.key:
+            elif temp.key >= next.key:
                 temp.sibling = next.sibling
                 HeapNode.binomial_link(next, temp)
             else:
@@ -80,15 +85,11 @@ class BinomialHeap:
                     heap.head = next    
                 HeapNode.binomial_link(temp, next)
                 temp = next
-            next = temp.sibling
-        return heap
+            next = temp.sibling      
     
     def insert(self, val):
-        new_node = HeapNode(val, 0, None, None, None)
-        heap = BinomialHeap()
-        heap.head = new_node
-        new_heap = BinomialHeap.union(self, heap)
-        self.head = new_heap.head
+        self.head = HeapNode(val, 0, None, None, self.head)
+        BinomialHeap.unite(self, None, self.head, self.head.sibling)
 
     def print_heap(self):
 
@@ -101,14 +102,14 @@ class BinomialHeap:
         
         return print_heap(self.head)
     
-    def extract_min(self):
+    def extract_max(self):
         if self.head is None:
             return None
         prev_min, min_node = None, self.head
         prev, temp = self.head, self.head.sibling
 
         while temp != None:
-            if temp.key < min_node.key:
+            if temp.key > min_node.key:
                 min_node = temp
                 prev_min = prev
             prev = temp
@@ -159,15 +160,17 @@ if __name__ == "__main__":
         )
 
     for N in Ns:
+        a = 0
+        b = N // 2
         for k in Ks:
-            skup = [random.randint(0, 10_000) for _ in range(N)]
+            skup = [random.randint(a, b) for _ in range(N)]
             binomial_heap = BinomialHeap()
             start_time_binomial = time.perf_counter()
 
             for i, val in enumerate(skup):
                 binomial_heap.insert(val)
                 if i % k == 0:
-                    binomial_heap.extract_min()
+                    binomial_heap.extract_max()
             
             end_time_binomial = time.perf_counter()
 
@@ -175,15 +178,22 @@ if __name__ == "__main__":
             
             binary_heap = []
             for i, val in enumerate(skup):
-                heapq.heappush(binary_heap, val)
+                heapq.heappush(binary_heap, -val)
                 if i % k == 0:
                     heapq.heappop(binary_heap)
 
             end_time_binary = time.perf_counter()
 
+            p = random.randint(0.75 * (a + b), b)
+            with open(f"{N}_{k}.txt", "w+") as f:
+                f.write(f'p={p}\n')
+                while binomial_heap.find_max().key > p:
+                    heapq.heappop(binary_heap)
+                    f.write(f'{binomial_heap.extract_max()}\n')
+
             heap_correct = True
             while binary_heap and heap_correct:
-                if heapq.heappop(binary_heap) != binomial_heap.extract_min():
+                if -heapq.heappop(binary_heap) != binomial_heap.extract_max():
                     heap_correct = False
 
             total_time_binomial = round(end_time_binomial - start_time_binomial, 2)
