@@ -132,6 +132,40 @@ class BinomialHeap:
         new_heap = BinomialHeap.union(self, heap)
         self.head = new_heap.head
         return min_node.key
+    
+    def find_node(self, key: int) -> HeapNode | None:
+        if self.head is None:
+            return None
+        
+        stack = []
+        temp = self.head
+        while stack and temp.key != key:
+            if temp.sibling:
+                stack.append(temp.sibling)
+            if temp.child is not None:
+                temp = temp.child
+            elif len(stack) > 0:
+                temp = stack.pop()
+        if temp and temp.key == key:
+            return temp
+        return None
+
+    def decrease_key(self, node: HeapNode, k: int) -> bool:
+        if k > node.key:
+            return False
+        node.key = k
+        temp, par = node, node.parent
+        while par and temp.key < par.key:
+            temp.key, par.key = par.key, temp.key
+            temp, par = par, par.parent
+        return True
+
+    def delete_key(self, key: int) -> bool:
+        if node := self.find_node(key):
+            self.decrease_key(node, float("-infinity"))
+            self.extract_min()
+            return True
+        return False
 
 
 if __name__ == "__main__":
@@ -140,79 +174,80 @@ if __name__ == "__main__":
     import time
 
 
-    Ns = [1000, 10_000, 100_000, 1_000_000, 10_000_000]
-    Ks = [10, 100]
+    # Ns = [1000, 10_000, 100_000, 1_000_000, 10_000_000]
+    # Ks = [10, 100]
 
 
-    size_space = 8
-    binomial_heap_size = 14
-    binary_heap_size = 12
-    correctness_size = 13
-    k_size = 7
-    horizontal_line = " ____________________________________________________________________ \n"
-    with open("report.txt", "w") as f:
-        f.write(
-            horizontal_line
-        )
-        f.write(
-            "|   size   |    K    |  BinomialHeap  |  BinaryHeap  |  Correctness  |\n"
-        )
+    # size_space = 8
+    # binomial_heap_size = 14
+    # binary_heap_size = 12
+    # correctness_size = 13
+    # k_size = 7
+    # horizontal_line = " ____________________________________________________________________ \n"
+    # with open("report.txt", "w") as f:
+    #     f.write(
+    #         horizontal_line
+    #     )
+    #     f.write(
+    #         "|   size   |    K    |  BinomialHeap  |  BinaryHeap  |  Correctness  |\n"
+    #     )
 
-    for N in Ns:
-        for k in Ks:
-            skup = [random.randint(0, 10_000) for _ in range(N)]
-            binomial_heap = BinomialHeap()
-            start_time_binomial = time.perf_counter()
+    # for N in Ns:
+    #     for k in Ks:
+    #         skup = [random.randint(0, 10_000) for _ in range(N)]
+    #         binomial_heap = BinomialHeap()
+    #         start_time_binomial = time.perf_counter()
 
-            for i, val in enumerate(skup):
-                binomial_heap.insert(val)
-                if i % k == 0:
-                    binomial_heap.extract_min()
+    #         for i, val in enumerate(skup):
+    #             binomial_heap.insert(val)
+    #             if i % k == 0:
+    #                 binomial_heap.extract_min()
             
-            end_time_binomial = time.perf_counter()
+    #         end_time_binomial = time.perf_counter()
 
-            start_time_binary = time.perf_counter()
+    #         start_time_binary = time.perf_counter()
             
-            binary_heap = []
-            for i, val in enumerate(skup):
-                heapq.heappush(binary_heap, val)
-                if i % k == 0:
-                    heapq.heappop(binary_heap)
+    #         binary_heap = []
+    #         for i, val in enumerate(skup):
+    #             heapq.heappush(binary_heap, val)
+    #             if i % k == 0:
+    #                 heapq.heappop(binary_heap)
 
-            end_time_binary = time.perf_counter()
+    #         end_time_binary = time.perf_counter()
 
-            heap_correct = True
-            while binary_heap and heap_correct:
-                if heapq.heappop(binary_heap) != binomial_heap.extract_min():
-                    heap_correct = False
+    #         heap_correct = True
+    #         while binary_heap and heap_correct:
+    #             if heapq.heappop(binary_heap) != binomial_heap.extract_min():
+    #                 heap_correct = False
 
-            total_time_binomial = round(end_time_binomial - start_time_binomial, 2)
-            total_time_binary = round(end_time_binary - start_time_binary, 2)
+    #         total_time_binomial = round(end_time_binomial - start_time_binomial, 2)
+    #         total_time_binary = round(end_time_binary - start_time_binary, 2)
 
-            with open("report.txt", "a+") as f:
-                f.write(horizontal_line)
+    #         with open("report.txt", "a+") as f:
+    #             f.write(horizontal_line)
 
-                str_to_write = ""
+    #             str_to_write = ""
 
-                str_to_write += f'| {" " * ((size_space - len(str(N))) // 2)}{N}'\
-                                f'{" " * (size_space - len(str(N)) - (size_space - len(str(N))) // 2)} '
+    #             str_to_write += f'| {" " * ((size_space - len(str(N))) // 2)}{N}'\
+    #                             f'{" " * (size_space - len(str(N)) - (size_space - len(str(N))) // 2)} '
                 
-                str_to_write += f'| {" " * ((k_size - len(str(k))) // 2)}{k}'\
-                                f'{" " * (k_size - len(str(k)) - (k_size - len(str(k))) // 2)} '
+    #             str_to_write += f'| {" " * ((k_size - len(str(k))) // 2)}{k}'\
+    #                             f'{" " * (k_size - len(str(k)) - (k_size - len(str(k))) // 2)} '
                 
-                str_to_write += f'| {" " * ((binomial_heap_size - len(str(total_time_binomial))) // 2)}{total_time_binomial}'\
-                                f'{" " * (binomial_heap_size - len(str(total_time_binomial)) - (binomial_heap_size - len(str(total_time_binomial))) // 2)} '
+    #             str_to_write += f'| {" " * ((binomial_heap_size - len(str(total_time_binomial))) // 2)}{total_time_binomial}'\
+    #                             f'{" " * (binomial_heap_size - len(str(total_time_binomial)) - (binomial_heap_size - len(str(total_time_binomial))) // 2)} '
                 
-                str_to_write += f'| {" " * ((binary_heap_size - len(str(total_time_binary))) // 2)}{total_time_binary}'\
-                                f'{" " * (binary_heap_size - len(str(total_time_binary)) - (binary_heap_size - len(str(total_time_binary))) // 2)} '
+    #             str_to_write += f'| {" " * ((binary_heap_size - len(str(total_time_binary))) // 2)}{total_time_binary}'\
+    #                             f'{" " * (binary_heap_size - len(str(total_time_binary)) - (binary_heap_size - len(str(total_time_binary))) // 2)} '
 
-                correct = "Correct" if heap_correct else "Incorrect"
-                str_to_write += f'| {" " * ((correctness_size - len(correct)) // 2)}{correct}'\
-                                f'{" " * (correctness_size - len(correct) - (correctness_size - len(correct)) // 2)} '
+    #             correct = "Correct" if heap_correct else "Incorrect"
+    #             str_to_write += f'| {" " * ((correctness_size - len(correct)) // 2)}{correct}'\
+    #                             f'{" " * (correctness_size - len(correct) - (correctness_size - len(correct)) // 2)} '
 
-                str_to_write += "|\n"
+    #             str_to_write += "|\n"
 
-                f.write(str_to_write)
+    #             f.write(str_to_write)
                 
-    with open("report.txt", "a+") as f:
-        f.write(horizontal_line)
+    # with open("report.txt", "a+") as f:
+    #     f.write(horizontal_line)
+        

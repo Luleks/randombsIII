@@ -134,13 +134,48 @@ class BinomialHeap:
         self.head = new_heap.head
         return min_node.key
 
+    def find_node(self, key: int) -> HeapNode | None:
+        if self.head is None:
+            return None
+        
+        temp = self.head
+        stack = [temp]
+        while stack:
+            temp = stack.pop()
+            if temp.key == key:
+                return temp
+            if temp.sibling:
+                stack.append(temp.sibling)
+            if temp.child is not None:
+                stack.append(temp.child)
+
+        if temp and temp.key == key:
+            return temp
+        return None
+
+    def increase_key(self, node: HeapNode, k: int) -> bool:
+        if k < node.key:
+            return False
+        node.key = k
+        temp, par = node, node.parent
+        while par and temp.key > par.key:
+            temp.key, par.key = par.key, temp.key
+            temp, par = par, par.parent
+        return True
+
+    def delete_key(self, key: int) -> bool:
+        if node := self.find_node(key):
+            self.increase_key(node, float("infinity"))
+            self.extract_max()
+            return True
+        return False
+
 
 if __name__ == "__main__":
     import heapq
     import random
     import time
-
-
+    
     Ns = [1000, 10_000, 100_000, 1_000_000, 10_000_000]
     Ks = [10, 100]
 
