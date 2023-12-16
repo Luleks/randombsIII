@@ -1,0 +1,16 @@
+#include <unistd.h>
+
+int pipe(int p[2]);
+p[0] = kraj datavoda za citanje
+p[1] = kraj datavoda za pisanje
+
+int close(int fd);
+fd- file deskriptor (p[0] ili p[1])
+
+ssize_t read(int fd, void* buff, size_t count);
+ssize_t write(int fd, void* buff, size_t count);
+
+
+PREUSMERAVANJE U/I
+int dup(int oldfd); -> najmanji slobodan deskriptor sada pokazuje na oldfd
+int dup2(int oldfd, int newfd); -> newfd sada pokazuje na oldfd

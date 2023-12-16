@@ -219,12 +219,15 @@ if __name__ == "__main__":
 
             end_time_binary = time.perf_counter()
 
+
+            # ZADATAK 7
             p = random.randint(0.75 * (a + b), b)
             with open(f"{N}_{k}.txt", "w+") as f:
                 f.write(f'p={p}\n')
                 while binomial_heap.find_max().key > p:
                     heapq.heappop(binary_heap)
                     f.write(f'{binomial_heap.extract_max()}\n')
+            # END OF ZADATAK 7
 
             heap_correct = True
             while binary_heap and heap_correct:
