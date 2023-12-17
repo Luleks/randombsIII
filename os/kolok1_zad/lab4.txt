@@ -1,0 +1,21 @@
+IV LAB
+1.
+Korišćenjem programskog jezika C kreirati tri Linux procesa koja komuniciraju korišćenjem datavoda. Prvi proces generiše niz proizvoljnih celih brojeva (dužina niza je fiksna i iznosi 15 karaktera). Ukoliko je prvi generisani broj paran, generisani niz brojeva se korišćenjem datavoda šalje drugom procesu koji ih upisuje u datoteku PARNI.txt. Ukoliko je prvi generisani broj neparan, generisani niz brojeva se korišćenjem datavoda šalje trećem procesu koji ih štampa na standardnom izlazu.
+2.
+Napisati program na C-u koji simulira problem proizvođač/potrošač korišćenjem datavoda. Glavni program se deli u dva procesa. Prvi proces (proizvođač) kreira N slučajnih pozitivnih celih brojeva i šalje ih drugom procesu. Broj N unosi korisnik sa tastature. Po završetku slanja, prvi proces šalje -1 kao kod za kraj. Drugi proces (potrošač) preuzima poslate brojeve iz datavoda i upisuje ih u datoteku tmp.txt.
+3.
+Korišćenjem programskog jezika C kreirati Linux program koji kreira dodatni process sa kojim komunicira korišćenjem datavoda. Roditeljski process generiše 20 slučajnih brojeva u opsegu od 100 do 199 i šalje ih putem datavoda procesu detetu. Proces dete na ekranu treba da odštampa samo brojeve koje dobije preko datavoda, a koji su deljivi sa 3. U slučaju broja koji nije deljiv sa 3 ne štampa ništa.
+4.
+Korišćenjem programskog jezika C kreirati dva Linux procesa koja komuniciraju korišćenjem datavoda. Glavni proces iz izvorišne datoteke čita 100 karaktera i korišćenjem datavoda pročitane karaktere prosleđuje drugom procesu koji ih upisuje u odredišnu datoteku čije se ime prosleđuje kao drugi argument komandne linije. Ova procedura se ponavlja dok se ne iskopira kompletna datoteka.
+5.
+Korišćenjem programskog jezika C kreirati tri Linux procesa koja komuniciraju korišćenjem datavoda. Prvi proces generiše niz proizvoljnih karaktera (dužina niza je fiksna i iznosi 20 karaktera) a zatim računa zbir ASCII vrednosti svih tako generisanih karaktera. Ukoliko je dobijeni zbir paran broj, generisani niz karaktera se korišćenjem datavoda šalje drugom procesu koji ih upisuje u datoteku KARAKTERI.txt. Ukoliko je dobijeni zbir neparan broj, generisani niz karaktera se korišćenjem datavoda šalje trećem procesu koji ih štampa na standardnom izlazu.
+6.
+Korišćenjem programskog jezika C kreirati dva Linux procesa koja komuniciraju korišćenjem datavoda. Jedan od procesa šalje drugom procesu slučajno generisani karakter a-z. Drugi proces primljene karaktere upisuje u datoteku chars.txt. Komunikacije se ponavlja 25 puta.
+7.
+Korišćenjem programskog jezika C kreirati dva Linux procesa koja komuniciraju korišćenjem datavoda. Jedan od procesa šalje drugom procesu slučajno generisanu celobrojnu vrednost. Drugi proces primljenu vrednost štampa na standardnom izlazu. Komunikacije se ponavlja 50 puta.
+8.
+Korišćenjem programskog jezika C kreirati Linux program koji kreira dodatni process sa kojim komunicira korišćenjem datavoda. Roditeljski process generiše 20 slučajnih brojeva u opsegu od 10 do 200 i šalje ih putem datavoda procesu detetu. Proces dete na ekranu treba da odštampa samo brojeve koje dobije preko datavoda a koji su deljivi sa 2. U slučaju broja koji nije deljiv sa 2 stampa se
+-1..
+9.
+Korišćenjem programskog jezika C kreirati tri Linux procesa koja komuniciraju korišćenjem datavoda. Prvi proces generiše niz proizvoljnih celih brojeva (dužina niza je fiksna i iznosi 20 brojeva) a zatim računa zbir svih tako generisanih brojeva. Ukoliko je dobijeni zbir paran broj, generisani niz brojeva se korišćenjem datavoda šalje drugom procesu koji ih upisuje u datoteku BROJEVI.txt. Ukoliko je dobijeni zbir neparan broj, generisani niz brojeva se korišćenjem datavoda šalje trećem procesu koji ih štampa na standardnom izlazu.
+

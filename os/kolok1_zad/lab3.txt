@@ -1,0 +1,60 @@
+1.
+Koriscenjem programskog jezika C kreirati program koji se deli u dva Linux procesa koji generisu 
+slucajne vrednosti i upisuju ih u datoteku ciji se naziv prosledjuje kao argument komandne linije glavnog procesa.
+ Prvi proces generise niz od tri slucajne pozitivne celobrojne vrednosti i upisuje ih u datoteku. 
+Nakon toga drugi proces generise dve slucajne negativne celobrojne vrednosti i upisuje ih u istu datoteku. 
+Postupak se ponavlja N puta (naizmenicno prvi pa drugi proces). 
+Vrednost N se takodje prosledjuje kao argument komandne linije. 
+Sinhronizovati rad procesa koriscenjem semarora.
+
+2.
+Korišćenjem programskog jezika C kreirati Linux program koji kreira dodatni proces. 
+Zadatak roditeljskog procesa i procesa deteta je da u datoteku čije se ime zadaje kao argument komandne 
+linije upišu redom brojeve od 1 do 20, pri čemu neparne brojeve upisuje proces roditelj, a parne proces dete
+
+3.
+Korišćenjem programskog jezika C kreirati dva Linux procesa koji generišu slučajne celobrojne vrednosti i 
+upisuju ih u datoteku brojevi.dat. Prvi proces generiše niz od tri pozitivne celobrojne vrednosti i upisuje 
+ih u datoteku. Nakon toga drugi proces generiše jednu negativnu celobrojnu vrednost i upisuje je u datoteku. 
+Postupak se ponavlja 20 puta (naizmenično prvi pa drugi proces).
+4.
+Korišćenjem programskog jezika C kreirati Linux program koji kreira dve dodatne niti 
+koje komuniciraju korišćenjem deljenog niza od 5 celobrojnih vrednosti. 
+Glavna nit u deljeni niz upisuje slučajno generisane vrednosti u opsegu -10 do 10. 
+Po završetku popunjavanja niza prva dodatna nit u tom deljenom nizu sve negativne vrednosti menja 
+njihovim apsolutnim vrednostima. Kada prva dodatna nit završi modifikaciju niza 
+druga dodatna nit prvi element niza menja srednjom vrednošću svih elemenata niza. 
+Pošto druga dodatna nit završi upis vrednosti na poziciju prvog elementa niza glavni program na ekranu 
+štampa sve elemente niza i izlazi.
+
+5.
+Korišćenjem programskog jezika C napisati Linux program threadovi u kome dve niti u tekstualnu datoteku 
+upisuju redom cele brojeve od 1 do 20, pri čemu je svaki broj u zasebnom redu. Prva nit upisuje samo neparne, 
+a druga nit samo parne brojeve. Sinhronizacijom niti obezbediti da se brojevi upisuju u datoteku 
+pravilnim redosledom, 1 2 3 4 5 itd.
+
+6.
+Korišćenjem programskog jezika C kreirati Linux program koji na standardnom izlazu štampa velika i 
+mala slova abecede u sledećem redosledu: aAbBcC...zZ. Pri tome mala slova štampa jedna nit, 
+a velika slova druga nit. Sinhronizovati niti tako da se slova abecede na ekranu štampaju pravilnim redosledom.
+
+7.
+Korišćenjem programskog jezika C napisati Linux program u kome dve niti pristupaju deljivom celobrojnom nizu. 
+Prva nit periodično (na 3 s) slučajno odabranom elementu niza dodaje slučajno generisanu celobrojnu vrednost iz 
+opsega [-10: 10]. Druga nit štampa elemente niza samo ukoliko je njihova suma (nakon izmene od strane prve niti) 
+paran broj.
+8.
+Korišćenjem programskog jezika C kreirati Linux program u kome glavna nit kreira celobrojni niz od N elemenata i popunjava ga slučajnim
+vrednostima iz opsega [0, 10]. Glavna nit pokreće dve dodatne niti koje su zadužene za sortiranje niza. 
+Prva dodatna nit sortira prvu polovinu niza (0- N/2-1) u rastući redosled a druga nit sortira drugu polovinu niza 
+(N/2-N-1) u opadajući redosled. Kada obe dodatne niti završe sa sortiranjem, glavna nit štampa sortirani niz. 
+Za sinhronizaciju niti koristiti mutex-e i uslovne promenljive.
+
+9.
+Korišćenjem programskog jezika C kreirati Linux program koji korišćenjem dve dodatne niti sortira 
+redom kolone i vrste celobrojne matrice koja se unosi sa tastature u glavnoj niti. 
+Prva dodatna nit sortira kolone, a druga dodatna nit sortira vrste. 
+Sinhronizacijom niti korišćenjem semafora obezbediti da se prvo sortira prva vrsta, 
+zatim prva kolona, pa druga vrsta, zatim druga kolona i tako dalje. 
+Glavna nit na kraju štampa sadržaj ovako sortirane matrice.
+
