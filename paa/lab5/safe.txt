@@ -1,0 +1,31 @@
+    # g = Graph()
+
+    # for i in range(0, 9):
+    #     g.add_node(i)
+
+    # g.add_edge(0, 1, 7)
+    # g.add_edge(0, 2, 5)
+    # g.add_edge(0, 3, 9)
+    # g.add_edge(1, 4, 4)
+    # g.add_edge(1, 5, 5)
+    # g.add_edge(2, 5, 3)
+    # g.add_edge(3, 6, 4)
+    # g.add_edge(4, 7, 7)
+    # g.add_edge(4, 8, 3)
+    # g.add_edge(5, 4, 2)
+    # g.add_edge(5, 8, 6)
+    # g.add_edge(6, 8, 7)
+    # g.add_edge(7, 8, 6)
+
+    # nx_graph = nx.Graph()
+    # for edge in g.edges:
+    #     nx_graph.add_edge(edge.node1, edge.node2, weight=edge.weight)
+    # nx_mst = nx.minimum_spanning_tree(nx_graph)
+    # nx_mst = [GraphEdge(node1, node2, nx_graph[node1][node2]['weight']) for node1, node2 in nx_mst.edges]
+
+    # for edge in sorted(nx_mst, key=lambda edge:edge.weight):
+    #     print(edge)
+    # print("-" * 20)
+
+    # for edge in sorted(nx_mst, key=lambda edge:edge.weight):
+    #     print(edge)
