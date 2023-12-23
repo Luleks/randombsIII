@@ -27,6 +27,8 @@ public class StrankaLogicImpl implements StrankaLogic {
 	@Override
 	public boolean addStranka(String Naziv, String NosilacListe, int SkupljeniPotpisi, int BrojClanova) {
 		try {
+			if (SkupljeniPotpisi < 10000)
+				return false;
 			em.getTransaction().begin();
 			Stranka stranka = new Stranka(Naziv, NosilacListe, SkupljeniPotpisi, BrojClanova);
 			em.persist(stranka);
@@ -68,6 +70,13 @@ public class StrankaLogicImpl implements StrankaLogic {
 		TypedQuery<Stranka>query = em.createQuery("SELECT s FROM Stranka s", Stranka.class);
 		List<Stranka> stranke = query.getResultList();
 		return stranke;
+	}
+	
+	@Override
+	public List<Integer> getStrankaIds() {
+		TypedQuery<Integer>query = em.createQuery("SELECT s.ID FROM Stranka s", Integer.class);
+		List<Integer> stranke = query.getResultList();
+		return stranke;	
 	}
 
 	@Override

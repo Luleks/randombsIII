@@ -2,28 +2,37 @@ package BusinessLogic;
 
 import Model.Stranka;
 
+import java.util.List;
+
 import javax.ejb.Remote;
 import javax.ejb.Stateless;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 
 @Remote(IzboriLogic.class)
 @Stateless
 public class IzboriLogicImpl implements IzboriLogic {
 
-	private EntityManager em;
+	private StrankaLogicImpl sli;
+	private ListicLogicImpl lli;
 	
 	public IzboriLogicImpl() {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("IzboriPU");
-		em = emf.createEntityManager();
+		sli = new StrankaLogicImpl();
+		lli = new ListicLogicImpl();
 	}
 	
 	@Override
 	public Stranka proglasiPobednika() {
-		// TODO Auto-generated method stub
-		return null;
+		int maxStrankaId = -1;
+		long maxGlasova = 0;
+		List<Integer> strankeIds = sli.getStrankaIds();
+		for (Integer id : strankeIds) {
+			long glasovi = lli.countGlasovi(id.intValue());
+			if (glasovi > maxGlasova) {
+				maxGlasova = glasovi;
+				maxStrankaId = id;
+			}
+		}
+		Stranka pobednik = sli.getStranka(maxStrankaId);
+		return pobednik;
 	}
 
 }

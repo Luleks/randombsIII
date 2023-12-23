@@ -14,6 +14,7 @@ public class Stranka {
 	@TableGenerator(name="strankaGen", table="id_gen", pkColumnName="genName", valueColumnName="genVal",
 			allocationSize=1, pkColumnValue="strankaGen")
 	@Id
+	@Column(name="strankaId")
 	@GeneratedValue(strategy = GenerationType.TABLE, generator="strankaGen")
 	private int ID;
 	

@@ -14,6 +14,7 @@ public class GlasackiListic {
 	@TableGenerator(name="listicGen", table="id_gen", pkColumnName="genName", valueColumnName="genVal",
 			allocationSize=1, pkColumnValue="listicGen")
 	@Id
+	@Column(name="listicID")
 	@GeneratedValue(strategy = GenerationType.TABLE, generator="listicGen")
 	private int ID;
 	

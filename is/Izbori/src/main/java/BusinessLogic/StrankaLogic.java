@@ -8,5 +8,6 @@ public interface StrankaLogic {
 	public boolean removeStranka(int id);
 	public Stranka getStranka(int id);
 	public List<Stranka> getStranke();
+	public List<Integer> getStrankaIds();
 	public boolean dodajPotpis(int id);
 }

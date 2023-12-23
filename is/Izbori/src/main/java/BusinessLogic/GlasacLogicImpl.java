@@ -73,6 +73,14 @@ public class GlasacLogicImpl implements GlasacLogic {
 			return null;
 		}
 	}
+	
+	@Override
+	public Glasac getGlasacByJmbg(String jmbg) {
+		TypedQuery<Glasac>query = em.createQuery("SELECT g FROM Glasac g WHERE g.jmbg=:Jmbg", Glasac.class);
+		query.setParameter("Jmbg", jmbg);
+		Glasac glasac = query.getSingleResult();
+		return glasac;
+	}
 
 	@Override
 	public List<Glasac> getGlasaci() {
@@ -81,4 +89,10 @@ public class GlasacLogicImpl implements GlasacLogic {
 		return glasaci;
 	}
 
+	@Override
+	public Long countGlasaci() {
+		TypedQuery<Long> query = em.createQuery("SELECT COUNT(*) FROM Glasac", Long.class);
+		Long count = query.getSingleResult();
+		return count;
+	}
 }

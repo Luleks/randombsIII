@@ -15,6 +15,7 @@ public class Glasac {
 	@TableGenerator(name="glasacGen", table="id_gen", pkColumnName="genName", valueColumnName="genVal",
 			allocationSize=1, pkColumnValue="glasacGen")
 	@Id
+	@Column(name="glasacId")
 	@GeneratedValue(strategy = GenerationType.TABLE, generator="glasacGen")
 	private int ID;
 	

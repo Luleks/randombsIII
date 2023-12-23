@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="tests.IzboriTest" time="3.223" tests="3" errors="1" skipped="0" failures="2">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori\target\test-classes;C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori\target\classes;C:\Users\Luka&amp;Jana\.m2\repository\org\eclipse\persistence\javax.persistence\2.0.0\javax.persistence-2.0.0.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\hibernate-entitymanager\4.2.8.Final\hibernate-entitymanager-4.2.8.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.GA\jboss-logging-3.1.0.GA.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\hibernate-core\4.2.8.Final\hibernate-core-4.2.8.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Luka&amp;Jana\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.1.Final\jboss-transaction-api_1.1_spec-1.0.1.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.2.Final\hibernate-commons-annotations-4.0.2.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar;C:\Users\Luka&amp;Jana\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Final\jboss-annotations-api_1.2_spec-1.0.0.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\ejb\jboss-ejb-api_3.2_spec\1.0.0.Final\jboss-ejb-api_3.2_spec-1.0.0.Final.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Prague"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin"/>
+    <property name="sun.java.command" value="C:\Windows\Temp\surefire5816697069970132772\surefirebooter-20231223110852959_3.jar C:\Windows\Temp\surefire5816697069970132772 2023-12-23T11-08-52_488-jvmRun1 surefire-20231223110852959_1tmp surefire_0-20231223110852959_2tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori\target\test-classes;C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori\target\classes;C:\Users\Luka&amp;Jana\.m2\repository\org\eclipse\persistence\javax.persistence\2.0.0\javax.persistence-2.0.0.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\hibernate-entitymanager\4.2.8.Final\hibernate-entitymanager-4.2.8.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\logging\jboss-logging\3.1.0.GA\jboss-logging-3.1.0.GA.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\hibernate-core\4.2.8.Final\hibernate-core-4.2.8.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Luka&amp;Jana\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\javassist\javassist\3.18.1-GA\javassist-3.18.1-GA.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.1_spec\1.0.1.Final\jboss-transaction-api_1.1_spec-1.0.1.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\javax\persistence\hibernate-jpa-2.0-api\1.0.1.Final\hibernate-jpa-2.0-api-1.0.1.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hibernate\common\hibernate-commons-annotations\4.0.2.Final\hibernate-commons-annotations-4.0.2.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\mysql\mysql-connector-java\5.1.41\mysql-connector-java-5.1.41.jar;C:\Users\Luka&amp;Jana\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\annotation\jboss-annotations-api_1.2_spec\1.0.0.Final\jboss-annotations-api_1.2_spec-1.0.0.Final.jar;C:\Users\Luka&amp;Jana\.m2\repository\org\jboss\spec\javax\ejb\jboss-ejb-api_3.2_spec\1.0.0.Final\jboss-ejb-api_3.2_spec-1.0.0.Final.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Luka&amp;Jana"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_202\jre"/>
+    <property name="basedir" value="C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori"/>
+    <property name="style.color" value="always"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Windows\Temp\surefire5816697069970132772\surefirebooter-20231223110852959_3.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_202\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_202-b08"/>
+    <property name="user.name" value="Luka&amp;Jana"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Luka&amp;Jana\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\WINDOWS\TEMP\"/>
+    <property name="java.version" value="1.8.0_202"/>
+    <property name="user.dir" value="C:\Users\Luka&amp;Jana\Desktop\eklips\Izbori"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_202\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858/jre/bin/server;C:/eclipse//plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.9.v20231028-0858/jre/bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\app\dbhomeXE\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\nodejs\;C:\TDM-GCC-64\bin;C:\Program Files\Mozilla Firefox\geckodriver;C:\Users\Luka&amp;Jana\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\Luka&amp;Jana\AppData\Local\Programs\Python\Python311\;C:\Program Files\JetBrains\PyCharm Community Edition 2023.1.3\bin;C:\Users\Luka&amp;Jana\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Luka&amp;Jana\AppData\Local\Programs\Azure Data Studio\bin;C:\Users\Luka&amp;Jana\AppData\Roaming\npm;C:\Users\Luka&amp;Jana\.dotnet\tools;C:\eclipse;;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25.202-b08"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_202\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="test" classname="tests.IzboriTest" time="0.295">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at tests.IzboriTest.test(IzboriTest.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+    <system-out><![CDATA[Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'strankaGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'strankaGen'
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'strankaGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'strankaGen'
+Hibernate: 
+    insert 
+    into
+        Stranke
+        (brojClanova, nazivStranke, nosilacListe, skupljeniPotpisi, strankaId) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'strankaGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'strankaGen'
+Hibernate: 
+    insert 
+    into
+        Stranke
+        (brojClanova, nazivStranke, nosilacListe, skupljeniPotpisi, strankaId) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'strankaGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'strankaGen'
+Hibernate: 
+    insert 
+    into
+        Stranke
+        (brojClanova, nazivStranke, nosilacListe, skupljeniPotpisi, strankaId) 
+    values
+        (?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'glasacGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'glasacGen'
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'glasacGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'glasacGen'
+Hibernate: 
+    insert 
+    into
+        Glasac
+        (funkcioner, glasao, ime, jmbg, prezime, glasacId) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'glasacGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'glasacGen'
+Hibernate: 
+    insert 
+    into
+        Glasac
+        (funkcioner, glasao, ime, jmbg, prezime, glasacId) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'glasacGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'glasacGen'
+Hibernate: 
+    insert 
+    into
+        Glasac
+        (funkcioner, glasao, ime, jmbg, prezime, glasacId) 
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'glasacGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'glasacGen'
+Hibernate: 
+    insert 
+    into
+        Glasac
+        (funkcioner, glasao, ime, jmbg, prezime, glasacId) 
+    values
+        (?, ?, ?, ?, ?, ?)
+BeforeClass: Inicijalizacija testa uspesna
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Before: U sistemu postoje stranke i glasaci
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        stranka0_.strankaId as strankaI1_2_0_,
+        stranka0_.brojClanova as brojClan2_2_0_,
+        stranka0_.nazivStranke as nazivStr3_2_0_,
+        stranka0_.nosilacListe as nosilacL4_2_0_,
+        stranka0_.skupljeniPotpisi as skupljen5_2_0_ 
+    from
+        Stranke stranka0_ 
+    where
+        stranka0_.strankaId=?
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'listicGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'listicGen'
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'listicGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'listicGen'
+Hibernate: 
+    insert 
+    into
+        GlasackiListic
+        (izabranaStranka, listicID) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        stranka0_.strankaId as strankaI1_2_0_,
+        stranka0_.brojClanova as brojClan2_2_0_,
+        stranka0_.nazivStranke as nazivStr3_2_0_,
+        stranka0_.nosilacListe as nosilacL4_2_0_,
+        stranka0_.skupljeniPotpisi as skupljen5_2_0_ 
+    from
+        Stranke stranka0_ 
+    where
+        stranka0_.strankaId=?
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'listicGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'listicGen'
+Hibernate: 
+    insert 
+    into
+        GlasackiListic
+        (izabranaStranka, listicID) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        stranka0_.strankaId as strankaI1_2_0_,
+        stranka0_.brojClanova as brojClan2_2_0_,
+        stranka0_.nazivStranke as nazivStr3_2_0_,
+        stranka0_.nosilacListe as nosilacL4_2_0_,
+        stranka0_.skupljeniPotpisi as skupljen5_2_0_ 
+    from
+        Stranke stranka0_ 
+    where
+        stranka0_.strankaId=?
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'listicGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'listicGen'
+Hibernate: 
+    insert 
+    into
+        GlasackiListic
+        (izabranaStranka, listicID) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        genVal 
+    from
+        id_gen 
+    where
+        genName = 'listicGen' for update
+            
+Hibernate: 
+    update
+        id_gen 
+    set
+        genVal = ? 
+    where
+        genVal = ? 
+        and genName = 'listicGen'
+Hibernate: 
+    insert 
+    into
+        GlasackiListic
+        (izabranaStranka, listicID) 
+    values
+        (?, ?)
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        GlasackiListic glasackili0_
+Hibernate: 
+    select
+        count(*) as col_0_0_ 
+    from
+        Glasac glasac0_
+]]></system-out>
+    <system-err><![CDATA[Dec 23, 2023 11:08:53 AM org.hibernate.annotations.common.Version <clinit>
+INFO: HCANN000001: Hibernate Commons Annotations {4.0.2.Final}
+Dec 23, 2023 11:08:53 AM org.hibernate.Version logVersion
+INFO: HHH000412: Hibernate Core {4.2.8.Final}
+Dec 23, 2023 11:08:53 AM org.hibernate.cfg.Environment <clinit>
+INFO: HHH000206: hibernate.properties not found
+Dec 23, 2023 11:08:53 AM org.hibernate.cfg.Environment buildBytecodeProvider
+INFO: HHH000021: Bytecode provider name : javassist
+Dec 23, 2023 11:08:54 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:54 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:54 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:54 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:54 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:54 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:54 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:54 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:55 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:55 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:55 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:55 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:56 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:56 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:56 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000402: Using Hibernate built-in connection pool (not for production use!)
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000115: Hibernate connection pool size: 20
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000006: Autocommit mode: true
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000401: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/Izbori?useSSL=true]
+Dec 23, 2023 11:08:56 AM org.hibernate.service.jdbc.connections.internal.DriverManagerConnectionProviderImpl configure
+INFO: HHH000046: Connection properties: {user=root, password=****, autocommit=true, release_mode=auto}
+Dec 23, 2023 11:08:56 AM org.hibernate.dialect.Dialect <init>
+INFO: HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.transaction.internal.TransactionFactoryInitiator initiateService
+INFO: HHH000268: Transaction strategy: org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory
+Dec 23, 2023 11:08:56 AM org.hibernate.hql.internal.ast.ASTQueryTranslatorFactory <init>
+INFO: HHH000397: Using ASTQueryTranslatorFactory
+Dec 23, 2023 11:08:56 AM org.hibernate.ejb.internal.EntityManagerFactoryRegistry addEntityManagerFactory
+WARN: HHH000436: Entity manager factory name (IzboriPU) is already registered.  If entity manager will be clustered or passivated, specify a unique value for property 'hibernate.ejb.entitymanager_factory_name'
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1452, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot add or update a child row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1452, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot add or update a child row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1452, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot add or update a child row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+]]></system-err>
+  </testcase>
+  <testcase name="test" classname="tests.IzboriTest" time="0.298">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at tests.IzboriTest.testPostcondition(IzboriTest.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></failure>
+  </testcase>
+  <testcase name="" classname="tests.IzboriTest" time="0.329">
+    <error message="No entity found for query" type="javax.persistence.NoResultException"><![CDATA[javax.persistence.NoResultException: No entity found for query
+	at org.hibernate.ejb.QueryImpl.getSingleResult(QueryImpl.java:290)
+	at BusinessLogic.GlasacLogicImpl.getGlasacByJmbg(GlasacLogicImpl.java:81)
+	at tests.IzboriTest.clearTest(IzboriTest.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]></error>
+    <system-out><![CDATA[Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+Hibernate: 
+    delete 
+    from
+        Stranke 
+    where
+        strankaId=?
+Hibernate: 
+    delete 
+    from
+        Stranke 
+    where
+        strankaId=?
+Hibernate: 
+    delete 
+    from
+        Stranke 
+    where
+        strankaId=?
+Hibernate: 
+    delete 
+    from
+        Glasac 
+    where
+        glasacId=?
+Hibernate: 
+    delete 
+    from
+        Glasac 
+    where
+        glasacId=?
+Hibernate: 
+    delete 
+    from
+        Glasac 
+    where
+        glasacId=?
+Hibernate: 
+    delete 
+    from
+        Glasac 
+    where
+        glasacId=?
+Hibernate: 
+    select
+        stranka0_.strankaId as strankaI1_2_0_,
+        stranka0_.brojClanova as brojClan2_2_0_,
+        stranka0_.nazivStranke as nazivStr3_2_0_,
+        stranka0_.nosilacListe as nosilacL4_2_0_,
+        stranka0_.skupljeniPotpisi as skupljen5_2_0_ 
+    from
+        Stranke stranka0_ 
+    where
+        stranka0_.strankaId=?
+Hibernate: 
+    select
+        glasac0_.glasacId as glasacId1_0_,
+        glasac0_.funkcioner as funkcion2_0_,
+        glasac0_.glasao as glasao3_0_,
+        glasac0_.ime as ime4_0_,
+        glasac0_.jmbg as jmbg5_0_,
+        glasac0_.prezime as prezime6_0_ 
+    from
+        Glasac glasac0_ 
+    where
+        glasac0_.jmbg=?
+]]></system-out>
+    <system-err><![CDATA[Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1451, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot delete or update a parent row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1451, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot delete or update a parent row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+WARN: SQL Error: 1451, SQLState: 23000
+Dec 23, 2023 11:08:56 AM org.hibernate.engine.jdbc.spi.SqlExceptionHelper logExceptions
+ERROR: Cannot delete or update a parent row: a foreign key constraint fails (`izbori`.`glasackilistic`, CONSTRAINT `glasackilistic_ibfk_1` FOREIGN KEY (`izabranaStranka`) REFERENCES `stranke` (`strankaId`))
+]]></system-err>
+  </testcase>
+</testsuite>

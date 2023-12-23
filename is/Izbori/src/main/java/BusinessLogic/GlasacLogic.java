@@ -8,5 +8,7 @@ public interface GlasacLogic {
 	public boolean updateGlasao(int id);
 	public boolean removeGlasac(int id);
 	public Glasac getGlasac(int id);
+	public Glasac getGlasacByJmbg(String jmbg);
 	public List<Glasac> getGlasaci();
+	public Long countGlasaci();
 }

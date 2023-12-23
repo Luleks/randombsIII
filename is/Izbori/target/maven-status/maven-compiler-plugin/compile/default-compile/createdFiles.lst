@@ -1,0 +1,11 @@
+BusinessLogic\StrankaLogicImpl.class
+BusinessLogic\ListicLogicImpl.class
+BusinessLogic\IzboriLogic.class
+Model\GlasackiListic.class
+Model\Stranka.class
+BusinessLogic\GlasacLogicImpl.class
+BusinessLogic\StrankaLogic.class
+Model\Glasac.class
+BusinessLogic\GlasacLogic.class
+BusinessLogic\ListicLogic.class
+BusinessLogic\IzboriLogicImpl.class
