@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Projekat</title>
+	</h:head>
+    
+	<h:body>
+	  <h:button value="Nazad" outcome="home.xhtml" />
+	 
+      <h2>Knjiga gostiju</h2>
+		
+		<h:form>
+			<h4>Preuzmi podatke o rezervaciji</h4>
+			<div>
+				<h:outputLabel value="ID rezervacije:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{knjigaGostijuController.gid}"></h:inputText>
+      		</div>
+			<h:commandButton value="Preuzmi rezervaciju" action="#{knjigaGostijuController.getEntry(knjigaGostijuController.gid)}"></h:commandButton>
+		</h:form>
+		
+		<h:form>
+     		<h4>Kreiranje nove rezervacije</h4>
+      		<div>
+				<h:outputLabel value="ID gosta:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{knjigaGostijuController.idGost}"></h:inputText>
+      		</div>  
+
+      		<div>
+      			<h:outputLabel value="Broj kreveta:"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.brojKreveta}"></h:inputText>
+      		</div>
+      		
+      		<div>
+      			<h:outputLabel value="Broj dana:"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.brojDana}"></h:inputText>
+      		</div>
+      		<h:commandButton value="Rasporedi gosta" action="#{knjigaGostijuController.rasporediGosta(knjigaGostijuController.idGost, knjigaGostijuController.brojKreveta, knjigaGostijuController.brojDana)}"></h:commandButton>
+		</h:form>
+          
+     	<h:form>
+     		<h4>Azuriranje rezervacije</h4>
+     		
+     		<div>
+				<h:outputLabel value="ID rezervacije"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{knjigaGostijuController.uid}"></h:inputText>
+      		</div>
+     		
+      		<div>
+				<h:outputLabel value="ID gosta:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{knjigaGostijuController.idGost}"></h:inputText>
+      		</div>  
+
+      		<div>
+      			<h:outputLabel value="ID sobe"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.idSoba}"></h:inputText>
+      		</div>
+      		
+      		<div>
+      			<h:outputLabel value="Broj dana:"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.brojDana}"></h:inputText>
+      		</div>
+			
+			<div>
+      			<h:outputLabel value="Racun room servisa:"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.racunRoomServis}"></h:inputText>
+      		</div>
+      
+			<h:commandButton value="Azuriraj gosta" action="#{knjigaGostijuController.updateEntry(knjigaGostijuController.uid, knjigaGostijuController.idGost, knjigaGostijuController.idSoba, knjigaGostijuController.brojDana, knjigaGostijuController.racunRoomServis)}"></h:commandButton>
+		</h:form> 
+		
+		<h:form>
+       		<h4>Brisanje rezervacije</h4>
+      		<div>
+				<h:outputLabel value="ID rezervacije za brisanje:"/>
+			</div>
+			<div>
+				<h:inputText value="#{knjigaGostijuController.did}"></h:inputText>
+      		</div>
+
+ 			<h:commandButton value="Brisi rezervaciju" action="#{knjigaGostijuController.deleteEntry(knjigaGostijuController.did)}"></h:commandButton>          
+		</h:form>
+      
+		<h:form>
+      	<h:dataTable value="#{knjigaGostijuController.getStavke()}" var="s"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    			style="color:white;font-size:20px;font-weight:bold; margin-top:30px;text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue; border:3px solid #a5e840; background-color:rgba(211, 239, 167,0.7);text-align:center; border-spacing: 5px; width:80%; margin-left:10%;">
+    	
+    		<h:column >
+    			<f:facet  name="header">
+    				ID rezervacije
+    			</f:facet>
+    			<h:outputText value="#{s.id}"/>
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				ID gosta
+				</f:facet>
+    			<h:outputText value="#{s.idGost}"/>
+    		</h:column>
+
+    		<h:column>
+    			<f:facet name="header">
+    				ID sobe
+				</f:facet>
+    			<h:outputText value="#{s.idSoba}"/>
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Broj dana 
+				</f:facet>
+    			<h:outputText value="#{s.brojDana}"/>
+    		</h:column>
+			
+			<h:column>
+    			<f:facet name="header">
+    				Racun za room servis 
+				</f:facet>
+    			<h:outputText value="#{s.roomServiceRacun}"/>
+    		</h:column>
+		</h:dataTable>
+                
+        </h:form>
+         
+   </h:body>
+</html>

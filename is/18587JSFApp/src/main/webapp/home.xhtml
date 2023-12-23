@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Hotel</title>
+	</h:head>
+	
+	<h:body>
+    	<h2>Informacioni sistem hotela</h2>
+   		
+		<h3>Za pregled i ažuriranje podataka o sobama i gostima hotela, izaberite odgovarajuću opciju.</h3>
+		<h3>Rezervacija sobe:</h3>
+		 <div>
+           	<h:button value="Rezervacija sobe" outcome="knjigagostiju.xhtml" />
+       	</div>
+
+        <h3>Sobe</h3>
+        <div>
+           	<h:button value="Sobe" outcome="soba.xhtml" />
+       	</div>
+        
+		<h3>Gosti</h3>
+       	<div>
+           	<h:button value="Gosti" outcome="gost.xhtml" />
+       	</div>
+   </h:body>
+</html>

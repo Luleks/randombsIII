@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:head>
+		<title>Projekat</title>
+	</h:head>
+    
+	<h:body>
+	  <h:button value="Nazad" outcome="home.xhtml" />
+	 
+      <h2>Sobe</h2>
+		
+		<h:form>
+			<h4>Preuzmi podatke o sobi</h4>
+			<div>
+				<h:outputLabel value="Broj sobe:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{sobaController.gid}"></h:inputText>
+      		</div>
+			<h:commandButton value="Preuzmi sobu" action="#{sobaController.getSoba(sobaController.gid)}"></h:commandButton>
+		</h:form>
+		
+		<h:form>
+     		<h4>Kreiranje nove sobe</h4>
+      		<div>
+				<h:outputLabel value="Broj sobe:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{sobaController.brojSobe}"></h:inputText>
+      		</div>  
+
+      		<div>
+      			<h:outputLabel value="Broj kreveta"/>
+			</div>
+			<div>
+				<h:inputText value="#{sobaController.brojKreveta}"></h:inputText>
+      		</div>
+      		
+      		<div>      
+      		<h:outputLabel value="Tip sobe:"/>
+      		</div>
+      		<h:selectOneMenu value = "#{sobaController.tipSobe}"> 
+   				<f:selectItem itemValue = "Single" itemLabel = "Single" /> 
+   				<f:selectItem itemValue = "Double" itemLabel = "Double" /> 
+   				<f:selectItem itemValue = "Pair" itemLabel = "Pair" /> 
+   				<f:selectItem itemValue = "Triple" itemLabel = "Triple" /> 
+   				<f:selectItem itemValue = "Suite" itemLabel = "Suite" />
+   				<f:selectItem itemValue = "King Suite" itemLabel = "King Suite" />  
+	  		</h:selectOneMenu> 
+      		
+      		<div>
+      			<h:outputLabel value="Cena po noci"/>
+			</div>
+			<div>
+				<h:inputText value="#{sobaController.cenaPoNoci}"></h:inputText>
+      		</div>
+      		<h:commandButton value="Kreiraj sobu" action="#{sobaController.addSoba()}"></h:commandButton>
+		</h:form>
+          
+     	<h:form>
+     		<h4>Azuriranje sobe</h4>
+      		<div>
+				<h:outputLabel value="Broj sobe za azuriranje:"/>
+			</div>
+			<div>
+      	 		<h:inputText value="#{sobaController.brojSobe}"></h:inputText>
+      		</div>  
+
+      		<div>
+      			<h:outputLabel value="Broj kreveta"/>
+			</div>
+			<div>
+				<h:inputText value="#{sobaController.brojKreveta}"></h:inputText>
+      		</div>
+      		
+      		<div>      
+      		<h:outputLabel value="Tip sobe:"/>
+      		</div>
+      		<h:selectOneMenu value = "#{sobaController.tipSobe}"> 
+   				<f:selectItem itemValue = "Single" itemLabel = "Single" /> 
+   				<f:selectItem itemValue = "Double" itemLabel = "Double" /> 
+   				<f:selectItem itemValue = "Pair" itemLabel = "Pair" /> 
+   				<f:selectItem itemValue = "Triple" itemLabel = "Triple" /> 
+   				<f:selectItem itemValue = "Suite" itemLabel = "Suite" />
+   				<f:selectItem itemValue = "King Suite" itemLabel = "King Suite" />  
+	  		</h:selectOneMenu> 
+      		
+      		<div>
+      			<h:outputLabel value="Cena po noci"/>
+			</div>
+			<div>
+				<h:inputText value="#{sobaController.cenaPoNoci}"></h:inputText>
+      		</div>   
+      
+			<h:commandButton value="Azuriraj sobu" action="#{sobaController.updateSobaSaBrojem()}"></h:commandButton>
+		</h:form> 
+		
+		<h:form>
+       		<h4>Brisanje sobe</h4>
+      		<div>
+				<h:outputLabel value="ID sobe za brisanje:"/>
+			</div>
+			<div>
+				<h:inputText value="#{sobaController.did}"></h:inputText>
+      		</div>
+
+ 			<h:commandButton value="Brisi sobu" action="#{sobaController.deleteSoba(sobaController.did)}"></h:commandButton>          
+		</h:form>
+      
+		<h:form>
+      	<h:dataTable value="#{sobaController.getSobe()}" var="s"
+    			styleClass="order-table"
+    			headerClass="order-table-header"
+    			rowClasses="order-table-odd-row,order-table-even-row"
+    			style="color:white;font-size:20px;font-weight:bold; margin-top:30px;text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px darkblue; border:3px solid #a5e840; background-color:rgba(211, 239, 167,0.7);text-align:center; border-spacing: 5px; width:80%; margin-left:10%;">
+    	
+    		<h:column >
+    			<f:facet  name="header">
+    				ID Sobe
+    			</f:facet>
+    			<h:outputText value="#{s.id}"/>
+    		</h:column>
+ 
+    		<h:column>
+    			<f:facet name="header">
+    				Broj sobe
+				</f:facet>
+    			<h:outputText value="#{s.brojSobe}"/>
+    		</h:column>
+
+    		<h:column>
+    			<f:facet name="header">
+    				Broj kreveta
+				</f:facet>
+    			<h:outputText value="#{s.brojKreveta}"/>
+    		</h:column>
+    		
+    		<h:column>
+    			<f:facet name="header">
+    				Tip sobe 
+				</f:facet>
+    			<h:outputText value="#{s.tipSobe}"/>
+    		</h:column>
+			
+			<h:column>
+    			<f:facet name="header">
+    				Cena po noci
+				</f:facet>
+    			<h:outputText value="#{s.cenaPoNoci}"/>
+    		</h:column>
+			
+			<h:column>
+    			<f:facet name="header">
+    				Zauzeta
+				</f:facet>
+    			<h:outputText value="#{s.jesteZauzeta}"/>
+    		</h:column>
+		</h:dataTable>
+                
+        </h:form>
+         
+   </h:body>
+</html>
