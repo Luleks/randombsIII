@@ -76,10 +76,15 @@ public class GlasacLogicImpl implements GlasacLogic {
 	
 	@Override
 	public Glasac getGlasacByJmbg(String jmbg) {
-		TypedQuery<Glasac>query = em.createQuery("SELECT g FROM Glasac g WHERE g.jmbg=:Jmbg", Glasac.class);
-		query.setParameter("Jmbg", jmbg);
-		Glasac glasac = query.getSingleResult();
-		return glasac;
+		try {
+			TypedQuery<Glasac>query = em.createQuery("SELECT g FROM Glasac g WHERE g.jmbg=:Jmbg", Glasac.class);
+			query.setParameter("Jmbg", jmbg);
+			Glasac glasac = query.getSingleResult();
+			return glasac;
+		}
+		catch (Exception e) {
+			return null;
+		}
 	}
 
 	@Override

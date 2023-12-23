@@ -25,6 +25,19 @@ public class StrankaLogicImpl implements StrankaLogic {
 	}
 	
 	@Override
+	public Stranka getStrankaByNaziv(String naziv) {
+		try {
+			TypedQuery<Stranka>query = em.createQuery("SELECT s FROM Stranka s WHERE s.naziv=:naziv", Stranka.class);
+			query.setParameter("naziv", naziv);
+			Stranka s = query.getSingleResult();
+			return s;
+		}
+		catch (Exception e) {
+			return null;
+		}
+	}
+	
+	@Override
 	public boolean addStranka(String Naziv, String NosilacListe, int SkupljeniPotpisi, int BrojClanova) {
 		try {
 			if (SkupljeniPotpisi < 10000)

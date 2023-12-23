@@ -10,6 +10,9 @@ import static org.junit.Assert.*;
 
 import Model.Stranka;
 import Model.Glasac;
+import Model.GlasackiListic;
+
+import java.util.List;
 
 import BusinessLogic.StrankaLogicImpl;
 import BusinessLogic.GlasacLogicImpl;
@@ -46,9 +49,9 @@ public class IzboriTest {
 	@Before
 	public void testPrecondition() {
 
-		Stranka s1 = sli.getStranka(1);
-		Stranka s2 = sli.getStranka(2);
-		Stranka s3 = sli.getStranka(3);
+		Stranka s1 = sli.getStrankaByNaziv("Dummy Stranka 1");
+		Stranka s2 = sli.getStrankaByNaziv("Dummy Stranka 2");
+		Stranka s3 = sli.getStrankaByNaziv("Dummy Stranka 3");
 		
 		assertNotNull(s1);
 		assertNotNull(s2);
@@ -69,18 +72,18 @@ public class IzboriTest {
 	
 	@Test
 	public void test() {
-		boolean uspesno1 = lli.dodajListic(1, "0111111111111");
-		//boolean neuspesno1 = !lli.dodajListic(0, "011111111111");
-		boolean uspesno2 = lli.dodajListic(5, "0222222222222");
-		boolean uspesno3 = lli.dodajListic(2, "0333333333333");
-		boolean uspesno4 = lli.dodajListic(2, "0444444444444");
+		boolean uspesno1 = lli.dodajListic("Dummy Stranka 1", "0111111111111");
+		boolean neuspesno1 = !lli.dodajListic("Dummy Stranka 1", "011111111111");
+		boolean uspesno2 = lli.dodajListic("Dummy Stranka 5", "0222222222222");
+		boolean uspesno3 = lli.dodajListic("Dummy Stranka 2", "0333333333333");
+		boolean uspesno4 = lli.dodajListic("Dummy Stranka 2", "0444444444444");
 		
-		assertTrue(uspesno1 && uspesno2 && uspesno3 && uspesno4);		
+		assertTrue(uspesno1 && neuspesno1 && uspesno2 && uspesno3 && uspesno4);		
 
 		Stranka pobednik = ili.proglasiPobednika();
-		Stranka pobedio = sli.getStranka(1);
+		Stranka pobedio = sli.getStrankaByNaziv("Dummy Stranka 2");
 		
-		assertEquals("Pogresan pobednik", pobednik, pobedio);
+		assertEquals("Pogresan pobednik", pobednik.getID(), pobedio.getID());
 	}
 	
 	@After
@@ -93,14 +96,21 @@ public class IzboriTest {
 	
 	@AfterClass
 	public static void clearTest() {
-		Stranka s1 = sli.getStranka(1);
-		Stranka s2 = sli.getStranka(2);
-		Stranka s3 = sli.getStranka(3);
+		Stranka s1 = sli.getStrankaByNaziv("Dummy Stranka 1");
+		Stranka s2 = sli.getStrankaByNaziv("Dummy Stranka 2");
+		Stranka s3 = sli.getStrankaByNaziv("Dummy Stranka 3");
 		
 		Glasac g1 = gli.getGlasacByJmbg("0111111111111");
 		Glasac g2 = gli.getGlasacByJmbg("0222222222222");
 		Glasac g3 = gli.getGlasacByJmbg("0333333333333");
-		Glasac g4 = gli.getGlasacByJmbg("0444444444444");	
+		Glasac g4 = gli.getGlasacByJmbg("0444444444444");
+		
+		List<GlasackiListic> listici = lli.getListici();
+		for (GlasackiListic l : listici) {
+			lli.removeListic(l.getID());
+		}
+		listici = lli.getListici();
+		assertTrue(listici.size() == 0);
 		
 		sli.removeStranka(s1.getID());
 		sli.removeStranka(s2.getID());
@@ -110,9 +120,9 @@ public class IzboriTest {
 		gli.removeGlasac(g3.getID());
 		gli.removeGlasac(g4.getID());
 		
-		s1 = sli.getStranka(0);
-		s2 = sli.getStranka(1);
-		s3 = sli.getStranka(2);
+		s1 = sli.getStrankaByNaziv("Dummy Stranka 1");
+		s2 = sli.getStrankaByNaziv("Dummy Stranka 2");
+		s3 = sli.getStrankaByNaziv("Dummy Stranka 3");
 		
 		g1 = gli.getGlasacByJmbg("0111111111111");
 		g2 = gli.getGlasacByJmbg("0222222222222");
