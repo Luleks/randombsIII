@@ -18,11 +18,11 @@
             <h4>Dodaj Listic</h4>
             <div>
                 <h:outputLabel value="Broj Stranke:"/>
-                <h:inputText value="#{listicController.brStranke}" rendered="#{listicController.brStranke == 0}"/>
+                <h:inputText value="#{listicController.brStranke}"/>
             </div>
             <div>
                 <h:outputLabel value="Naziv Stranke:"/>
-                <h:inputText value="#{listicController.nazivStranke}" rendered="#{listicController.brStranke != 0}"/>
+                <h:inputText value="#{listicController.nazivStranke}"/>
             </div>
             <div>
                 <h:outputLabel value="Glasac JMBG:"/>
@@ -33,31 +33,18 @@
             <!-- Remove Listic Form -->
             <h4>Remove Listic</h4>
             <div>
-                <h:outputLabel value="ID lista for removal:"/>
-                <h:inputText value="#{listicController.brStranke}" rendered="#{listicController.brStranke == 0}"/>
+                <h:outputLabel value="ID:"/>
+                <h:inputText value="#{listicController.brStranke}" />
             </div>
-            <h:commandButton value="Remove Listic" action="#{listicController.removeListic(listicController.brStranke)}"/>
+            <h:commandButton value="Remove Listic" action="#{listicController.removeListic(listicController.brStranke)}" />
 
-            <!-- Display Listici Table -->
-            <h4>Listici List</h4>
-            <h:dataTable value="#{listicController.getListici()}" var="listic">
-                <h:column>
-                    <f:facet name="header">Broj Stranke</f:facet>
-                    <h:outputText value="#{listic.brStranke}" rendered="#{listic.brStranke != 0}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Naziv Stranke</f:facet>
-                    <h:outputText value="#{listic.nazivStranke}" rendered="#{listic.brStranke == 0}"/>
-                </h:column>
-                <h:column>
-                    <f:facet name="header">Glasac JMBG</f:facet>
-                    <h:outputText value="#{listic.glasacJmbg}"/>
-                </h:column>
-            </h:dataTable>
-
-            <!-- Izlaznost and Glasovi Counts -->
-            <h:outputText value="Izlaznost: #{listicController.countIzlaznost()}"/>
-            <h:outputText value="Glasovi Count: #{listicController.countGlasovi()}"/>
+            <!-- Izlaznost and Glasovi Counts on separate rows -->
+            <div>
+                <h:outputText value="Izlaznost: #{listicController.countIzlaznost()}"/>
+            </div>
+            <div>
+                <h:outputText value="Glasovi Count: #{listicController.countGlasovi(listicController.brStranke)}"/>
+            </div>
         </h:form>
     </h:body>
 </html>

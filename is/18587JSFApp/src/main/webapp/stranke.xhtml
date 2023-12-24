@@ -37,7 +37,7 @@
             <!-- Remove Stranka Form -->
             <h4>Remove Stranka</h4>
             <div>
-                <h:outputLabel value="ID stranke for removal:"/>
+                <h:outputLabel value="ID stranke:"/>
                 <h:inputText value="#{strankaController.id}"/>
             </div>
             <h:commandButton value="Remove Stranka" action="#{strankaController.removeStranka(strankaController.id)}"/>
@@ -45,7 +45,7 @@
             <!-- Get Stranka Form -->
             <h4>Get Stranka</h4>
             <div>
-                <h:outputLabel value="ID stranke for retrieval:"/>
+                <h:outputLabel value="ID stranke:"/>
                 <h:inputText value="#{strankaController.id}"/>
             </div>
             <h:commandButton value="Get Stranka" action="#{strankaController.getStrankaById(strankaController.id)}"/>
@@ -53,7 +53,7 @@
             <!-- Get Stranka By Naziv Form -->
             <h4>Get Stranka By Naziv</h4>
             <div>
-                <h:outputLabel value="Naziv for retrieval:"/>
+                <h:outputLabel value="Naziv:"/>
                 <h:inputText value="#{strankaController.naziv}"/>
             </div>
             <h:commandButton value="Get Stranka By Naziv" action="#{strankaController.getStrankaByNaziv(strankaController.naziv)}"/>
@@ -63,7 +63,7 @@
             <h:dataTable value="#{strankaController.getStranke()}" var="stranka">
                 <h:column>
                     <f:facet name="header">ID</f:facet>
-                    <h:outputText value="#{stranka.id}"/>
+                    <h:outputText value="#{stranka.ID}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">Naziv</f:facet>
@@ -83,7 +83,7 @@
                 </h:column>
                 <h:column>
                     <f:facet name="header">Akcije</f:facet>
-                    <h:commandButton value="Dodaj Potpis" action="#{strankaController.dodajPotpis(stranka.id)}"/>
+                    <h:commandButton value="Dodaj Potpis" action="#{strankaController.dodajPotpis(stranka.ID)}"/>
                 </h:column>
             </h:dataTable>
         </h:form>

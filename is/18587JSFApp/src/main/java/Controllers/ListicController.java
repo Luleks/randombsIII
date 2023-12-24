@@ -19,10 +19,6 @@ public class ListicController {
     @EJB
     private ListicLogic listicLogic;
 
-    public ListicController() {
-
-    }
-
     public int getBrStranke() {
         return brStranke;
     }
@@ -47,19 +43,15 @@ public class ListicController {
         this.glasacJmbg = glasacJmbg;
     }
 
-    public void dodajListic() {
-        if (brStranke == 0) {
-            listicLogic.dodajListic(brStranke, glasacJmbg);
-        } else {
-            listicLogic.dodajListic(nazivStranke, glasacJmbg);
-        }
+    public void dodajListic(String nazivStranke, String glasacJmbg) {
+    	listicLogic.dodajListic(nazivStranke, glasacJmbg);
     }
 
     public double countIzlaznost() {
         return listicLogic.countIzlaznost();
     }
 
-    public int countGlasovi() {
+    public int countGlasovi(int brStranke) {
         return listicLogic.countGlasovi(brStranke);
     }
 

@@ -41,7 +41,7 @@
             <!-- Update Glasao Form -->
             <h4>Update Glasao</h4>
             <div>
-                <h:outputLabel value="ID gosta for update:"/>
+                <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Update Glasao" action="#{glasacController.updateGlasao(glasacController.id)}"/>
@@ -49,7 +49,7 @@
             <!-- Remove Glasac Form -->
             <h4>Remove Glasac</h4>
             <div>
-                <h:outputLabel value="ID gosta for removal:"/>
+                <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Remove Glasac" action="#{glasacController.removeGlasac(glasacController.id)}"/>
@@ -57,7 +57,7 @@
             <!-- Get Glasac Form -->
             <h4>Get Glasac</h4>
             <div>
-                <h:outputLabel value="ID gosta for retrieval:"/>
+                <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Get Glasac" action="#{glasacController.getGlasac(glasacController.id)}"/>
@@ -65,7 +65,7 @@
             <!-- Get Glasac By Jmbg Form -->
             <h4>Get Glasac By Jmbg</h4>
             <div>
-                <h:outputLabel value="JMBG for retrieval:"/>
+                <h:outputLabel value="JMBG:"/>
                 <h:inputText value="#{glasacController.jmbg}"/>
             </div>
             <h:commandButton value="Get Glasac By Jmbg" action="#{glasacController.getGlasacByJmbg(glasacController.jmbg)}"/>

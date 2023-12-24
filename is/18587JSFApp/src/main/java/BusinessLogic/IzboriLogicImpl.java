@@ -4,19 +4,23 @@ import Model.Stranka;
 
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 
 @Stateless
 public class IzboriLogicImpl implements IzboriLogic {
 
-	private StrankaLogicImpl sli;
-	private ListicLogicImpl lli;
+	@PersistenceContext(name="IzboriPU")
+	private EntityManager em;
 	
-	public IzboriLogicImpl() {
-		sli = new StrankaLogicImpl();
-		lli = new ListicLogicImpl();
-	}
+	@EJB
+	private StrankaLogic sli;
+	
+	@EJB
+	private ListicLogic lli;
 	
 	@Override
 	public Stranka proglasiPobednika() {

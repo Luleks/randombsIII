@@ -6,6 +6,7 @@ import Model.GlasackiListic;
 
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 import javax.persistence.TypedQuery;
@@ -18,13 +19,12 @@ public class ListicLogicImpl implements ListicLogic {
 	
 	@PersistenceContext(name="IzboriPU")
 	private EntityManager em;
-	private StrankaLogicImpl sli;
-	private GlasacLogicImpl gli;
 	
-	public ListicLogicImpl() {
-		sli = new StrankaLogicImpl();
-		gli = new GlasacLogicImpl();
-	}
+	@EJB
+	private StrankaLogic sli;
+
+	@EJB
+	private GlasacLogic gli;
 	
 	@Override
 	public boolean removeListic(int listicID) {

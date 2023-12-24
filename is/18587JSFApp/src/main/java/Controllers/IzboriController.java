@@ -14,10 +14,6 @@ public class IzboriController {
     @EJB
     private IzboriLogic izboriLogic;
 
-    public IzboriController() {
-
-    }
-
     public Stranka proglasiPobednika() {
         return izboriLogic.proglasiPobednika();
     }
