@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <h:head>
+        <title>Glasac Management</title>
+    </h:head>
+
+    <h:body>
+        <h:form>
+            <h2>Glasac Management</h2>
+
+            <!-- Add Glasac Form -->
+            <h4>Add Glasac</h4>
+            <div>
+                <h:outputLabel value="JMBG:"/>
+                <h:inputText value="#{glasacController.jmbg}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Ime:"/>
+                <h:inputText value="#{glasacController.ime}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Prezime:"/>
+                <h:inputText value="#{glasacController.prezime}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Funkcioner:"/>
+                <h:selectBooleanCheckbox value="#{glasacController.funkcioner}"/>
+            </div>
+            <div>
+                <h:outputLabel value="Glasao:"/>
+                <h:selectBooleanCheckbox value="#{glasacController.glasao}"/>
+            </div>
+            <h:commandButton value="Add Glasac" action="#{glasacController.addGlasac}"/>
+
+            <!-- Update Glasao Form -->
+            <h4>Update Glasao</h4>
+            <div>
+                <h:outputLabel value="ID gosta for update:"/>
+                <h:inputText value="#{glasacController.id}"/>
+            </div>
+            <h:commandButton value="Update Glasao" action="#{glasacController.updateGlasao(glasacController.id)}"/>
+
+            <!-- Remove Glasac Form -->
+            <h4>Remove Glasac</h4>
+            <div>
+                <h:outputLabel value="ID gosta for removal:"/>
+                <h:inputText value="#{glasacController.id}"/>
+            </div>
+            <h:commandButton value="Remove Glasac" action="#{glasacController.removeGlasac(glasacController.id)}"/>
+
+            <!-- Get Glasac Form -->
+            <h4>Get Glasac</h4>
+            <div>
+                <h:outputLabel value="ID gosta for retrieval:"/>
+                <h:inputText value="#{glasacController.id}"/>
+            </div>
+            <h:commandButton value="Get Glasac" action="#{glasacController.getGlasac(glasacController.id)}"/>
+
+            <!-- Get Glasac By Jmbg Form -->
+            <h4>Get Glasac By Jmbg</h4>
+            <div>
+                <h:outputLabel value="JMBG for retrieval:"/>
+                <h:inputText value="#{glasacController.jmbg}"/>
+            </div>
+            <h:commandButton value="Get Glasac By Jmbg" action="#{glasacController.getGlasacByJmbg(glasacController.jmbg)}"/>
+
+            <!-- Display Glasaci Table -->
+            <h4>Glasaci List</h4>
+            <h:dataTable value="#{glasacController.getGlasaci()}" var="g">
+                <h:column>
+                    <f:facet name="header">ID</f:facet>
+                    <h:outputText value="#{g.id}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">JMBG</f:facet>
+                    <h:outputText value="#{g.jmbg}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Ime</f:facet>
+                    <h:outputText value="#{g.ime}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Prezime</f:facet>
+                    <h:outputText value="#{g.prezime}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Funkcioner</f:facet>
+                    <h:outputText value="#{g.funkcioner}"/>
+                </h:column>
+                <h:column>
+                    <f:facet name="header">Glasao</f:facet>
+                    <h:outputText value="#{g.glasao}"/>
+                </h:column>
+            </h:dataTable>
+        </h:form>
+    </h:body>
+</html>

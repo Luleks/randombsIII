@@ -7,26 +7,31 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html">
 	
 	<h:head>
-		<title>Hotel</title>
+		<title>Izbori</title>
 	</h:head>
 	
 	<h:body>
-    	<h2>Informacioni sistem hotela</h2>
+    	<h2>Informacioni sistem Republicke Izborne Komisije</h2>
    		
-		<h3>Za pregled i ažuriranje podataka o sobama i gostima hotela, izaberite odgovarajuću opciju.</h3>
-		<h3>Rezervacija sobe:</h3>
+		<h3>Izaberite opciju</h3>
+		<h3>Glasanje: </h3>
 		 <div>
-           	<h:button value="Rezervacija sobe" outcome="knjigagostiju.xhtml" />
+           	<h:button value="Glasanje" outcome="glasanje.xhtml" />
        	</div>
 
-        <h3>Sobe</h3>
+        <h3>Glasaci: </h3>
         <div>
-           	<h:button value="Sobe" outcome="soba.xhtml" />
+           	<h:button value="Glasaci" outcome="glasaci.xhtml" />
        	</div>
         
-		<h3>Gosti</h3>
+		<h3>Stranke: </h3>
        	<div>
-           	<h:button value="Gosti" outcome="gost.xhtml" />
+           	<h:button value="Stranke" outcome="stranke.xhtml" />
+       	</div>
+       	
+       	<h3>Proglasenje pobednika: </h3>
+       	<div>
+           	<h:button value="Izbori" outcome="izbori.xhtml" />
        	</div>
    </h:body>
 </html>
