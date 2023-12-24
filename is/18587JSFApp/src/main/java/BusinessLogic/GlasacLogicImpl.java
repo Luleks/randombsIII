@@ -21,10 +21,8 @@ public class GlasacLogicImpl implements GlasacLogic {
 	@Override
 	public boolean addGlasac(String Jmbg, String Ime, String Prezime, boolean Funkcioner, boolean Glasao) {
 		try {
-			em.getTransaction().begin();
 			Glasac glasac = new Glasac(Jmbg, Ime, Prezime, Funkcioner, Glasao);
 			em.persist(glasac);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception e) {
@@ -46,9 +44,7 @@ public class GlasacLogicImpl implements GlasacLogic {
 	public boolean removeGlasac(int id) {
 		try {
 			Glasac glasac = em.find(Glasac.class, id);
-			em.getTransaction().begin();
 			em.remove(glasac);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception e) {

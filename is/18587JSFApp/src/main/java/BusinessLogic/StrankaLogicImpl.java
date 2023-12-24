@@ -33,10 +33,10 @@ public class StrankaLogicImpl implements StrankaLogic {
 		try {
 			if (SkupljeniPotpisi < 10000)
 				return false;
-			em.getTransaction().begin();
+			System.out.println("Here0");
 			Stranka stranka = new Stranka(Naziv, NosilacListe, SkupljeniPotpisi, BrojClanova);
+			System.out.println(stranka.getNaziv() + " " + stranka.getNosilacListe() + " " + stranka.getSkupljeniPotpisi() + " " + stranka.getBrojClanova());
 			em.persist(stranka);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception e) {
@@ -48,9 +48,7 @@ public class StrankaLogicImpl implements StrankaLogic {
 	public boolean removeStranka(int id) {
 		try {
 			Stranka stranka = em.find(Stranka.class, id);
-			em.getTransaction().begin();
 			em.remove(stranka);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception e) {

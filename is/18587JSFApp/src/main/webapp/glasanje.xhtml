@@ -14,12 +14,7 @@
         <h:form>
             <h2>Listic Management</h2>
 
-            <!-- Dodaj Listic Form -->
             <h4>Dodaj Listic</h4>
-            <div>
-                <h:outputLabel value="Broj Stranke:"/>
-                <h:inputText value="#{listicController.brStranke}"/>
-            </div>
             <div>
                 <h:outputLabel value="Naziv Stranke:"/>
                 <h:inputText value="#{listicController.nazivStranke}"/>
@@ -28,17 +23,17 @@
                 <h:outputLabel value="Glasac JMBG:"/>
                 <h:inputText value="#{listicController.glasacJmbg}"/>
             </div>
-            <h:commandButton value="Dodaj Listic" action="#{listicController.dodajListic}"/>
-
-            <!-- Remove Listic Form -->
+            <h:commandButton value="Dodaj Listic" action="#{listicController.dodajListic(listicController.nazivStranke, listicController.glasacJmbg)}"/>
+		</h:form>
+		<h:form>
             <h4>Remove Listic</h4>
             <div>
                 <h:outputLabel value="ID:"/>
                 <h:inputText value="#{listicController.brStranke}" />
             </div>
             <h:commandButton value="Remove Listic" action="#{listicController.removeListic(listicController.brStranke)}" />
-
-            <!-- Izlaznost and Glasovi Counts on separate rows -->
+		</h:form>
+		<h:form>
             <div>
                 <h:outputText value="Izlaznost: #{listicController.countIzlaznost()}"/>
             </div>

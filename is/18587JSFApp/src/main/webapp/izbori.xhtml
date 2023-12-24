@@ -13,12 +13,10 @@
     <h:body>
         <h:form>
             <h2>Izbori Management</h2>
-
-            <!-- Proglasi Pobednika Form -->
+		
             <h4>Proglasi Pobednika</h4>
             <h:commandButton value="Proglasi Pobednika" action="#{izboriController.proglasiPobednika()}" />
             
-            <!-- Display Pobednik -->
             <h:outputText value="Pobednik: #{izboriController.proglasiPobednika().naziv}" rendered="#{izboriController.proglasiPobednika() != null}" />
         </h:form>
     </h:body>

@@ -64,7 +64,8 @@ public class StrankaController {
         this.brojClanova = brojClanova;
     }
 
-    public void addStranka() {
+    public void addStranka(String naziv, String nosilacListe, int skupljeniPotpisi, int brojClanova) {
+    	System.out.println(naziv + nosilacListe + skupljeniPotpisi + brojClanova);
         strankaLogic.addStranka(naziv, nosilacListe, skupljeniPotpisi, brojClanova);
     }
 

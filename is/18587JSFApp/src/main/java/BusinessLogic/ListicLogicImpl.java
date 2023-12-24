@@ -30,9 +30,7 @@ public class ListicLogicImpl implements ListicLogic {
 	public boolean removeListic(int listicID) {
 		try {
 			GlasackiListic listic = em.find(GlasackiListic.class, listicID);
-			em.getTransaction().begin();
 			em.remove(listic);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception e) {
@@ -55,7 +53,6 @@ public class ListicLogicImpl implements ListicLogic {
 				return false;
 			g.setGlasao(true);
 			
-			em.getTransaction().begin();
 			GlasackiListic listic = null;
 			Stranka stranka = sli.getStrankaByNaziv(nazivStranke);
 			if (stranka == null)
@@ -63,7 +60,6 @@ public class ListicLogicImpl implements ListicLogic {
 			else
 				listic = new GlasackiListic(stranka.getID());
 			em.persist(listic);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception ec) {
@@ -79,7 +75,6 @@ public class ListicLogicImpl implements ListicLogic {
 				return false;
 			g.setGlasao(true);
 			
-			em.getTransaction().begin();
 			GlasackiListic listic = null;
 			Stranka stranka = sli.getStranka(brStranke);
 			if (stranka == null)
@@ -87,7 +82,6 @@ public class ListicLogicImpl implements ListicLogic {
 			else
 				listic = new GlasackiListic(brStranke);
 			em.persist(listic);
-			em.getTransaction().commit();
 			return true;
 		}
 		catch (Exception ec) {

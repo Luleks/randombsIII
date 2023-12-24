@@ -14,7 +14,6 @@
         <h:form>
             <h2>Glasac Management</h2>
 
-            <!-- Add Glasac Form -->
             <h4>Add Glasac</h4>
             <div>
                 <h:outputLabel value="JMBG:"/>
@@ -36,46 +35,46 @@
                 <h:outputLabel value="Glasao:"/>
                 <h:selectBooleanCheckbox value="#{glasacController.glasao}"/>
             </div>
-            <h:commandButton value="Add Glasac" action="#{glasacController.addGlasac}"/>
-
-            <!-- Update Glasao Form -->
+            <h:commandButton value="Add Glasac" action="#{glasacController.addGlasac()}"/>
+		</h:form>
+		<h:form>
             <h4>Update Glasao</h4>
             <div>
                 <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Update Glasao" action="#{glasacController.updateGlasao(glasacController.id)}"/>
-
-            <!-- Remove Glasac Form -->
+		</h:form>
+		<h:form>
             <h4>Remove Glasac</h4>
             <div>
                 <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Remove Glasac" action="#{glasacController.removeGlasac(glasacController.id)}"/>
-
-            <!-- Get Glasac Form -->
+		</h:form>
+		<h:form>
             <h4>Get Glasac</h4>
             <div>
                 <h:outputLabel value="ID glasaca:"/>
                 <h:inputText value="#{glasacController.id}"/>
             </div>
             <h:commandButton value="Get Glasac" action="#{glasacController.getGlasac(glasacController.id)}"/>
-
-            <!-- Get Glasac By Jmbg Form -->
+		</h:form>
+		<h:form>
             <h4>Get Glasac By Jmbg</h4>
             <div>
                 <h:outputLabel value="JMBG:"/>
                 <h:inputText value="#{glasacController.jmbg}"/>
             </div>
             <h:commandButton value="Get Glasac By Jmbg" action="#{glasacController.getGlasacByJmbg(glasacController.jmbg)}"/>
-
-            <!-- Display Glasaci Table -->
+		</h:form>
+		<h:form>
             <h4>Glasaci List</h4>
             <h:dataTable value="#{glasacController.getGlasaci()}" var="g">
                 <h:column>
                     <f:facet name="header">ID</f:facet>
-                    <h:outputText value="#{g.id}"/>
+                    <h:outputText value="#{g.ID}"/>
                 </h:column>
                 <h:column>
                     <f:facet name="header">JMBG</f:facet>
