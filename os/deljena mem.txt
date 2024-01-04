@@ -1,0 +1,90 @@
+#include <memory.h>
+
+void* memcpy(void* dest, void* src, size_t n);
+void* memccpy(void* dest, void* src, int c, size_t n);
+void* memchr(const void* s, int c, size_t n);
+int memcmp(const void* s1, const void* s2, size_t n);
+void* memset(void* s, int c, size_t n);
+
+
+Deljena memorija
+#include <sys/ipc.h>
+#include <sys/types.h>
+#include <sys/shm.h>
+
+int shmget(key_t key, int size, int flg);
+
+void* shmat(int shm_id, char* ptr, int flag); - Mapira deljenu mem u adr prostor procesa. shm_id - rezultat poziva fje shmget
+											  char* ptr - uvek NULL
+											  flag - SHM_RDONLY | 0
+void* shmdt(const void* shmaddr); - uklanjanje segmenta mem iz adr prostora porcesa
+
+int shmctl(int shmid, int cmd, struct shmid_ds buf);
+
+-----------------------------------------------------------n
+
+Datotecni sistem
+
+Rad sa datotekama
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int open(char* filename, int flags [, mode_t mode]);
+flags - O_RDONLY	O_RDWR		O_CREAT
+	O_WRONLY	O_APPEND	O_TRUNC
+
+int close(int fd);
+
+ssize_t read(int fd, void* buff, size_t count);
+ssize_t write(int fd, void* buff, size_t count);
+
+off_t lseek(int fd, off_t offset, int mode); - Pozicioniranje pokazivaca unutar datoteke. mode - SEEK_SET/SEEK_CUR/SEEK_END
+
+
+int stat(char* name, struct stat* buff); - informacije o nekoj datoteci
+
+#include <sys/stat.h>
+struct stat {
+dev_t st_dev; /* broj uređaja */
+ino_t st_ino; /* broj inode strukture */
+mode_t st_mode; /* dozvole pristupa datoteci */
+nlink_t st_nlink; /* broj linkova ka ovoj datoteci */
+uid_t st_uid; /* identifikacija korisnika */
+gid_t st_gid; /* identifikacija grupe */
+dev_t st_rdev; /* tip uređaja */
+off_t st_size; /* veličina datoteke u bajtovima*/
+blksize_t st_blksize; /* veličina blokova za U/I datotečnog sistema 	*/
+blkcnt_t st_blocks; /* broj dodeljenih blokova */
+time_t st_atime; /* vreme poslednjeg pristupa datoteci */
+time_t st_mtime; /* vreme poslednje modifikacije datoteke */
+time_t st_ctime; /* vreme poslednje promene statusa */
+};
+
+S_ISDIR
+S_ISREG
+S_ISCHR - znakovna specijalna datoteka
+S_ISBLK - blok specijalna datoteka
+S_ISFIFO - imenovani pipe ili FIFO
+S_ISLINK
+S_ISSOCK
+
+
+Rad sa direktorijumima
+#include <dirent.h>
+
+DIR* opendir(const char* pathname);
+
+struct dirent* readdir(DIR* dp);
+
+struct dirent {
+  ino_t d_ino;
+  char d_name[NAME_MAX + 1]; // ime stavke
+};
+
+void rewinddir(DIR* dp);
+void close(DIR* dp);
+
+int mkddir(const char* pathname, mode_t mode);
+int rmdir(const char* pathname);

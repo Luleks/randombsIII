@@ -1,0 +1,60 @@
+SIGNALI
+
+#include <signal.h>
+#include <sys/types.h>
+
+int kill(pid_t pid, int sig);
+pid - proces kome se salje signal { > 0 - salje se procesu sa zadatim spec
+				    = 0 - svim procesima koji pripadaju istoj grupi kao i proc koji salje siganl
+				    < -1 - svim procesima koji pripadaju grupi -pid
+				    = -1 - svim procesima koji mogu da prime signal
+
+sig - signal koji se salje
+SIGINT - Ctrl+C
+SIGTSTP - Ctrl+Z
+SIGKILL - signal koji prekida proces i koji se ne moze blokirati
+SIGALRM - signal alarama
+SIGSTOP - signal koji suspenduje izvrsenje procesa
+SIGUSR1/SIGUSR2 - korisnicki signali ...
+
+Obrada signala
+#include <signal.h>
+void (*signal(int signum, void(*handler)(int)))(int);
+Parametar handler moze biti SIG_DFL, SIG_IGN i pokazivac na hendlera. Povratna vrednost je
+pok na fju koja je prethodno bila zaduzena za hendlovanje signala
+
+int pause();
+suspenduje izvrsavanje procesa do stizanja nekog signala. Ukoliko se pristigli signal ignorise nece se nastaviti izvrsavanje prorces
+
+int alarm(uint seconds);
+posle seconds sekundi stize SIGALARM signal i default znaci prekid izvrsenja procesa
+
+
+REDOVI PORUKA
+
+#include <sys/ipc.h>
+#include <sys/types.h>
+#include <sys/msg.h>
+
+int msgget(key_t key, int msgflg);
+key - jedinstveni identifikator reda poruka na nivou OS-a
+msgflg - 0666 | IPC_CREAT
+
+int msgsnd(int msgid, int msgbuf* msgp, size_t msgsz, int msgflg);
+int msgrcv(int msgid, int msgbuf* msgp, size_t msgsz, int msgtyp, int msgflg);
+
+msgid - id reda poruke dobijen pozivom msgget fje
+msgp - pokazivac na bafer koji sadrzi poruku koja se salje ili u koji se poruka cita
+msgsz - velicina bafera poruke u bajtovima
+msgflg - mod slanja/primanja - uvek 0 (podrazumevani rezim)
+
+msgtyp - nenegativan ceo br koji definise tip poruke koji se cita
+ == 0 - sve poruke bez obzira na tip
+ > 0 - samo poruke spec tipa
+Citanjem poruke ona se uklanja iz reda poruka
+
+struct msgbuf {
+   long mtype;
+   BILOKOJITIP tip;
+}
+msgctl(int msqid, int cmd, struct msgid_ds buf);
