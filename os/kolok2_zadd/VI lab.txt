@@ -1,0 +1,22 @@
+VI LAB
+
+﻿1. Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (kao ulazni argument programa zadaje se apsolutna putanja do direktorijuma) i njegovim poddirektorijumima određuje i štampa imena svih regularnih datoteka koje u imenu sadrže slovo "p" tako da je dobijeni spisak sortiran po veličini datoteke u rastućem redosledu.
+
+﻿2. Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (putanja do direktorijuma se zadaje kao ulazni argument programa) rekurzivno nalazi pet najmanjih regularnih datoteka. Program na kraju rada treba da odštampa putanje i veličine tih datoteka.
+﻿
+3. Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (kao ulazni argument programa zadaje se apsolutna putanja do direktorijuma) i njegovim poddirektorijumima određuje i štampa imena svih regularnih datoteka koje u imenu sadrže bilo koju cifru tako da je dobijeni spisak sortiran po veličini datoteke u opadajućem redosledu.
+
+4.﻿ Na programskom jeziku C napisati program koji kreira dva dodatna procesa. Prvi proces dete čita liniju po liniju iz tekstualne datoteke ulaz1.txt. Drugi proces dete čita liniju po liniju teksta iz tekstualne datoteke ulaz2.txt. Oba procesa deteta pročitane linije teksta prosleđuju roditeljskom procesu koristeći deljivi memorijski prostor. Roditeljski proces primljene linije teksta od oba procesa deteta upisuje u tekstualnu datoteku izlaz.txt. Sinhronizovati rad ova tri procesa tako da izlazna datoteka izlaz.txt sadrži naizmenično linije teksta iz adatoteke ulaz1.txt i ulaz2.txt.
+﻿
+5. Korišćenjem programskog jezika C napisati Unix/Linux program koji kao argument komandne linije uzima naziv tekstualne datoteke u tekućem direktorijumu koja sadrži više linija teksta. Program se deli na dva procesa pri čemu proces roditelj otvara tekstualnu datoteku i čita iz nje liniju po liniju teksta i korišćenjem deljene memorije pročitanuliniju teksta prosleđuje procesu detetu.Proces dete štampa na standardnom izlazu (monitoru) linije tekstakoje prihvata iz deljene memorije. Kako bi obezbedili da proces dete štampa linije teksta onim redosledom kako se javljaju u tekstualnoj datoteci
+sinhronizovati procese korišćenjem IPC System V semafora.
+
+﻿6. Korišćenjem programskog jezika C napisati Linux/UNIX program koji kreira jedan dodatni proces. Ova dva procesa komuniciraju korišćenjem deljive memorije veličine dva int broja. Proces roditelj sa tastature čita jedan broj, a u deljenu memoriju upisuje taj broj i njegovu trostruku vrednost. Zatim proces dete čita ove brojeve i na ekranu štampa njihov zbir. Ovaj ciklus se ponavlja sve dok se sa tastature ne unese ključna reč KRAJ.
+
+7.﻿ Korišćenjem programskog jezika C napisati Linux/UNIX program koji u zadatom direktorijumu i njegovim poddirektorijumima nalazi sve datoteke koje imaju ekstenziju .sh i pokušava da ih izvrši
+(korišćenjem komande sh). Putanja do direktorijuma koji se pretražuje (apsolutna ili relativna) se prosleđuju programu kao argument komandne linije.
+
+8.﻿ Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (putanja do direktorijuma se zadaje kao ulazni argument programa) rekurzivno nalazi pet najvećih regularnih datoteka. Program na kraju rada treba da odštampa putanje i veličine tih datoteka.
+
+9. ﻿Korišćenjem programskog jezika C napisati Linux program koji u zadatom direktorijumu (kao ulazni argument programa zadaje se apsolutna putanja do direktorijuma) i njegovim poddirektorijumima određuje i štampa imena svih regularnih datoteka koje su veće od 100KB tako da je dobijeni spisak sortiran po veličini datoteke u rastućem redosledu.
+================================================================
