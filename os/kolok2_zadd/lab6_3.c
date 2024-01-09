@@ -1,44 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
 #include <dirent.h>
-#include <stdbool.h>
+#include <sys/stat.h>
 #include <string.h>
+#include <stdbool.h>
 
-struct info {
-    char put[512];
-    int size;
-};
-
-struct info fajls[100];
-int c = 0;
-
-bool has_digit(char* string) {
-    int i = 0;
-    while (string[i] != '\0') {
-        if ('0' <= string[i] && string[i] <= '9')
+bool has_digit(char* str) {
+    for (int i = 0; i < strlen(str); i++) {
+        if ('0' <= str[i] && str[i] <= '9')
             return true;
-        i += 1;
     }
     return false;
 }
 
-void search_dir(char* pathname) {
-    DIR* dp = opendir(pathname);
+struct fajl {
+    char put[512];
+    int size;
+};
+
+struct fajl fajls[100];
+int c = 0;
+
+void search_dir(char* dirname) {
+    DIR* dp = opendir(dirname);
     struct dirent* info;
     struct stat stats;
     char addr[512];
 
     while ((info = readdir(dp)) != NULL) {
-        strcpy(addr, pathname);
+        strcpy(addr, dirname);
         strcat(addr, "/");
         strcat(addr, info->d_name);
 
         stat(addr, &stats);
+
         if (S_ISREG(stats.st_mode) && has_digit(info->d_name)) {
-            strcpy(fajls[c].put, addr);
-            fajls[c++].size = stats.st_size;
+            struct fajl ent;
+            strcpy(ent.put, addr);
+            ent.size = stats.st_size;
+            fajls[c++] = ent;
         }
         else if (S_ISDIR(stats.st_mode) && strcmp(info->d_name, ".") != 0 && strcmp(info->d_name, "..") != 0)
             search_dir(addr);
@@ -48,16 +48,17 @@ void search_dir(char* pathname) {
 
 int main(int argc, char* argv[]) {
     search_dir(argv[1]);
+
     for (int i = 1; i < c; i++) {
+        struct fajl tmp = fajls[i];
         int j = i - 1;
-        struct info temp = fajls[i];
-        while (j >= 0 && fajls[j].size < temp.size) {
+        while (j >= 0 && tmp.size < fajls[j].size) {
             fajls[j + 1] = fajls[j];
             j -= 1;
         }
-        fajls[j + 1] = temp;
+        fajls[j + 1] = tmp;
     }
-    for (int i = 0; i < c; i++) {
-        printf("%s || %dB\n", fajls[i].put, fajls[i].size);
-    }
+
+    for (int i = 0; i < c; i++)
+        printf("%s || %d\n", fajls[i].put, fajls[i].size);
 }

@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/msg.h>
-#include <unistd.h>
 #include <sys/types.h>
-#include <sys/wait.h>
+#include <unistd.h>
 #include <string.h>
+#include <wait.h>
 
-#define QUEUE_MSG_KEY 10141
+#define MSG_QUEUE_KEY 15555
 
 struct msg {
-    char linija[50];
-    int linija_rbr;
-    int velika_slova;
+    char msg[50];
+    int rbr;
+    int len;
 };
 
 struct msgbuf {
@@ -19,41 +19,38 @@ struct msgbuf {
     struct msg msg;
 };
 
-int main(int argc, char* argv[]) {
-    int msg_key = msgget(QUEUE_MSG_KEY, 0666 | IPC_CREAT);
+int main() {
+    int key = msgget(MSG_QUEUE_KEY, 0666 | IPC_CREAT);
     struct msgbuf buf;
-    strcpy(buf.msg.linija, "");
 
     if (fork() != 0) {
-        FILE* f = fopen("primer.txt", "r");
+        FILE* f = fopen("ulaz.txt", "r");
         while (!feof(f)) {
-            fgets(buf.msg.linija, 50, f);
+            fgets(buf.msg.msg, 50, f);
             buf.mtype = 1;
-            msgsnd(msg_key, &buf, sizeof(struct msg), 0);
-            msgrcv(msg_key, &buf, sizeof(struct msg), 2, 0);
-            printf("Linija: %d ima %d velikih slova\n", buf.msg.linija_rbr, buf.msg.velika_slova);
+            msgsnd(key, &buf, sizeof(struct msg), 0);
+            msgrcv(key, &buf, sizeof(struct msg), 2, 0);
+            printf("%d | %d\n", buf.msg.rbr, buf.msg.len);
         }
-        printf("KRAJ\n");
-        strcpy(buf.msg.linija, "KRAJ");
+        strcpy(buf.msg.msg, "END");
         buf.mtype = 1;
-        msgsnd(msg_key, &buf, sizeof(struct msg), 0);
+        msgsnd(key, &buf, sizeof(struct msg), 0);
         wait(NULL);
-        msgctl(msg_key, IPC_RMID, NULL);
+        msgctl(key, IPC_RMID, NULL);
         fclose(f);
     }
     else {
-        int l_rbr = 1;
-        while (1) {
-            msgrcv(msg_key, &buf, sizeof(struct msg), 1, 0);
-            if (strcmp(buf.msg.linija, "KRAJ") == 0)
-                break;
-            buf.msg.velika_slova = 0;
-            buf.msg.linija_rbr = l_rbr;
-            for (int i = 0; i < strlen(buf.msg.linija); i++)
-                if ('A' <= buf.msg.linija[i] && buf.msg.linija[i] <= 'Z')
-                    buf.msg.velika_slova += 1;
+        msgrcv(key, &buf, sizeof(struct msg), 1, 0);
+        int rbr = 1;
+        while (strcmp(buf.msg.msg, "END") != 0) {
+            buf.msg.rbr = rbr++;
+            buf.msg.len = 0;
+            for (int i = 0; i < strlen(buf.msg.msg); i++)
+                if('A' <= buf.msg.msg[i] && buf.msg.msg[i] <= 'Z')
+                    buf.msg.len += 1;
             buf.mtype = 2;
-            msgsnd(msg_key, &buf, sizeof(struct msg), 0);
+            msgsnd(key, &buf, sizeof(struct msg), 0);
+            msgrcv(key, &buf, sizeof(struct msg), 1, 0);
         }
     }
 }

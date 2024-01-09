@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <signal.h>
 #include <sys/types.h>
+#include <unistd.h>
 
 int c = 0;
 int z = 0;
@@ -15,7 +16,7 @@ void ctrl_c_handler() {
 void ctrl_z_handler() {
     z += 1;
     if (z == 2) {
-        printf("\nCTRL+C clicked %d times\n", c);
+        printf("\nCtrl+c clicked %d times\n", c);
         z = 0;
     }
 }
@@ -23,6 +24,7 @@ void ctrl_z_handler() {
 int main() {
     signal(SIGINT, ctrl_c_handler);
     signal(SIGTSTP, ctrl_z_handler);
-    while (1)
-        pause(); 
+    while(1)
+        pause();
+    
 }
