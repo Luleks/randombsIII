@@ -1,0 +1,39 @@
+.main-div {
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+.desni-div {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  border: 1px solid black;
+}
+
+.btn-upisi {
+  grid-area: 5/1/6/3;
+}
+
+.predmeti-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.student-div {
+  display: flex;
+  margin: 10px;
+}
+
+.one-student-div {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.ocene {
+  display: grid;
+  height: 100px;
+  column-gap: 10%;
+}
+
+.margin-10 {
+  margin: 10px;
+}

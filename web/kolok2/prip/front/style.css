@@ -1,0 +1,40 @@
+body {
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+.predmeti {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.desni-div {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  padding: 10px;
+}
+
+.btn-upisi {
+  grid-area: 5/1/6/3;
+}
+
+.ocene {
+  display: flex;
+  margin: 10px;
+}
+
+.student-ocene {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.stubovi {
+  display: grid;
+  height: 100px;
+  column-gap: 7px;
+}
+
+.margin-10 {
+  margin: 10px;
+}

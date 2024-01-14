@@ -1,0 +1,77 @@
+Input elementni: <input> type=
+button
+checkbox
+color
+date
+email
+file
+image	(src, alt)
+submit
+text
+number
+password 
+radio (grupa su oni sa istim name attr)
+range (min, max)
+
+CSS stilovi za tekst
+
+font-family  // vise fontova, na kraju familija
+font-size    //
+font-weight  // u stotinama 100-800
+line-height  // prored
+text-align   <!-----------
+text-decoration  //underscore, strikethrough
+
+
+Specifikacija velicina
+apsolutne: cm, mm, in, px
+relativne:
+- em: relativno velicini fonta
+- ch: relativno u odnosu na sirinu karaktera "0" u elementu
+- rem: u odnosu na velicinu fonta root elementa
+- vw: 1% sirine viewporta
+- vh: 1% visine viewporta
+- %: u odnosu na roditeljski element
+
+
+FLEKSI
+
+display: flex
+flex-direction: row, row-reverse, column, column-reverse
+flex-wrap: nowrap, wrap, wrap-reverse
+justify-content - poravnanje potomaka u odnosu na glavnu osu
+	flex-start, flex-end, center, space-between, space-around, space-evenly
+align-items - poravnanje potomaka u odnosu na poprecnu osu
+	stretch, flex-start, flex-end, center, baseline
+align-content - poravnanje linije potomaka u odnosu na poprecnu osu (efekat tek kada imam vise linija potomaka)
+	stretch, flex-start, flex-end, center, space-between, space-around
+
+flex-grow/flex-shrink - bilo koji ceo broj, a podrazumevano je 0/1
+align-self: flex-start, flex-end, center, baseline, stretch
+
+
+GRIDI
+
+display: grid
+Grid line - razdeona linija izmedju celija
+Grid track - 1 red ili kolona celija
+Grid cell - celija
+Grid area - oblast grida
+
+grid-template-columns [first] 40px [line2] auto [line3] 25%
+grid-template-rows
+grid-template-areas:
+        "header header header header"
+        "main main . sidebar"
+        "footer footer footer footer";
+column-gap
+row-gap
+
+justify-items - poravnanje u odnosu na red  >\  center start
+align-items - poravnanje u odnosu na kolonu >/   end stretrch
+justify-content - poravnanje grida u odnosu na container horizontalno  -||- + space-x
+align-content - poravnanje grida u odnosu na container vertikalno
+
+grid-area
+justify-self
+align-self

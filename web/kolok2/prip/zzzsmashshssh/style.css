@@ -1,0 +1,47 @@
+.main-div {
+  display: grid;
+  grid-template-columns: auto 350px;
+}
+
+.predmeti-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.studenti-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.student-div {
+  border: 1px solid black;
+  padding: 2px;
+  width: 150px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.ocene-div {
+  display: grid;
+  column-gap: 5%;
+  flex-grow: 1;
+}
+
+.desni-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid black;
+  padding: 10px;
+  height: fit-content;
+}
+
+.btn-upisi {
+  grid-area: 5/1/6/3;
+}
+
+.margin-10 {
+  margin: 10px;
+}

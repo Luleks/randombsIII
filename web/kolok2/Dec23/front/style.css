@@ -1,0 +1,70 @@
+.main-div {
+  display: grid;
+  grid-template-columns: 200px auto;
+  row-gap: 5px;
+}
+
+.form-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  border: 2px solid black;
+  box-sizing: border-box;
+}
+
+.form-div input,
+.form-div select {
+  width: 88%;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 5px;
+}
+
+.submit-form {
+  grid-area: 6/1/7/3;
+  justify-self: center;
+}
+
+.form-div label {
+  margin-right: 0px;
+}
+
+.title {
+  grid-area: 1/1/2/3;
+  justify-self: center;
+  font-weight: bolder;
+}
+
+.margin-10 {
+  margin: 5px;
+}
+
+.prodavnica-div {
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 10px;
+}
+
+.prvi-div {
+  flex-grow: 1;
+}
+
+div[class^="proizvod-div"] {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 5px;
+}
+
+div[class^="kolicina-div"] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn-div {
+  display: flex;
+  align-items: center;
+  margin-left: 5px;
+}

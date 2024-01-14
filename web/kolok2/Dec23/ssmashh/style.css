@@ -1,0 +1,84 @@
+.main-div {
+  display: grid;
+  grid-template-columns: 200px auto;
+}
+
+.form-div {
+  border: 1px solid black;
+}
+
+.inner-form-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+}
+
+.title {
+  grid-area: 1/1/2/3;
+  text-align: center;
+}
+
+.inner-form-div input,
+.inner-form-div select {
+  width: 88%;
+}
+
+.btn-dodaj-proizvod {
+  grid-area: 6/1/7/3;
+}
+
+.margin-5 {
+  margin: 5px;
+}
+
+.prodaja-div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.title2 {
+  text-align: center;
+}
+
+.inner-prodaja-div {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+  row-gap: 5%;
+  height: fit-content;
+}
+
+.proizvod-div {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 10px;
+}
+
+.kolicina-div {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.kolicina-div input {
+  width: 50px;
+}
+
+.stats-div {
+  flex-grow: 1;
+}
+
+.sto-div {
+  width: 100%;
+  border: 1px dashed black;
+  height: 20px;
+}
+
+.btn-prodaja-div {
+  align-self: flex-end;
+}
